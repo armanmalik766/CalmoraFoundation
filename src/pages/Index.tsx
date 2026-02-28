@@ -28,97 +28,86 @@ const Index = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-background pb-20">
+        {/* 🌈 Soft gradient atmosphere */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
 
-  {/* 🌈 Soft gradient atmosphere */}
-  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
+        {/* 🎨 Decorative shape */}
+        <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[1200px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10" />
 
-  {/* 🎨 Decorative shape */}
-  <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[1200px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10" />
+        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          {/* LEFT */}
+          <div className="relative">
+            {/* Accent bar */}
+            <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
 
-  <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-6">
+              Preventive Mental Health Care
+            </p>
 
-    {/* LEFT */}
-    <div className="relative">
+            <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
+              Strong Minds.
+              <br />
+              Healthy Communities.
+            </h1>
 
-      {/* Accent bar */}
-      <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
+              Calmora Foundation provides structured psychological support
+              across schools, institutions, and underserved communities — before
+              crisis begins.
+            </p>
 
-      <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-6">
-        Preventive Mental Health Care
-      </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/get-involved"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+              >
+                Support Our Mission
+              </Link>
 
-      <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
-        Strong Minds.
-        <br />
-        Healthy Communities.
-      </h1>
-
-      <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
-        Calmora Foundation provides structured psychological support across
-        schools, institutions, and underserved communities — before crisis begins.
-      </p>
-
-      <div className="flex flex-wrap gap-4">
-        <Link
-          to="/get-involved"
-          className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
-        >
-          Support Our Mission
-        </Link>
-
-        <Link
-          to="/what-we-do"
-          className="border border-border px-8 py-4 rounded-xl font-semibold hover:bg-muted transition"
-        >
-          Our Programs
-        </Link>
-      </div>
-    </div>
-
-    {/* RIGHT — Floating Impact Card */}
-    <div className="relative">
-
-      <div className="absolute -inset-4 bg-primary/10 blur-2xl rounded-3xl" />
-
-      <div className="relative bg-card border border-border rounded-3xl p-10 shadow-2xl">
-
-        <h3 className="font-display text-2xl font-bold mb-6">
-          Why Calmora Matters
-        </h3>
-
-        <ul className="space-y-5 text-muted-foreground">
-          <li>• Early mental health intervention programs</li>
-          <li>• School & university partnerships</li>
-          <li>• Community resilience initiatives</li>
-          <li>• Professional burnout prevention</li>
-        </ul>
-
-        <div className="grid grid-cols-3 gap-6 mt-10 text-center">
-          <div>
-            <p className="text-3xl font-bold text-primary">10K+</p>
-            <p className="text-xs text-muted-foreground">Lives Reached</p>
+              <Link
+                to="/what-we-do"
+                className="border border-border px-8 py-4 rounded-xl font-semibold hover:bg-muted transition"
+              >
+                Our Programs
+              </Link>
+            </div>
           </div>
-          <div>
-            <p className="text-3xl font-bold text-primary">50+</p>
-            <p className="text-xs text-muted-foreground">Programs</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-primary">20+</p>
-            <p className="text-xs text-muted-foreground">Partners</p>
+
+          {/* RIGHT — Floating Impact Card */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-primary/10 blur-2xl rounded-3xl" />
+
+            <div className="relative bg-card border border-border rounded-3xl p-10 shadow-2xl">
+              <h3 className="font-display text-2xl font-bold mb-6">
+                Why Calmora Matters
+              </h3>
+
+              <ul className="space-y-5 text-muted-foreground">
+                <li>• Early mental health intervention programs</li>
+                <li>• School & university partnerships</li>
+                <li>• Community resilience initiatives</li>
+                <li>• Professional burnout prevention</li>
+              </ul>
+
+              <div className="grid grid-cols-3 gap-6 mt-10 text-center">
+                <div>
+                  <p className="text-3xl font-bold text-primary">10K+</p>
+                  <p className="text-xs text-muted-foreground">Lives Reached</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-primary">50+</p>
+                  <p className="text-xs text-muted-foreground">Programs</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold text-primary">20+</p>
+                  <p className="text-xs text-muted-foreground">Partners</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  {/* 🌊 Curved bottom */}
-  <div className="absolute bottom-0 left-0 w-full h-24 bg-background rounded-t-[100%]" />
-
-</section>
-
+      </section>
 
       {/* Stats */}
       <section className="bg-gradient-primary py-12">
