@@ -285,7 +285,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">Address</p>
                     <p className="font-medium text-foreground">
-                      98-A, Third Floor, Namberdar Estate, Taimoor Nagar, New
+                      98-B, Third Floor, Namberdar Estate, Taimoor Nagar, New
                       Friends Colony, New Delhi - 110065
                     </p>
                   </div>

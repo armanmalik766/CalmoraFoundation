@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "What We Do", path: "/what-we-do" },
+  { label: "About Us", path: "/what-we-do" },
   { label: "Get Involved", path: "/get-involved" },
   { label: "Contact", path: "/contact" },
 ];
@@ -17,9 +17,48 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center justify-center gap-2">
+        {/* <Link to="/" className="flex items-center justify-center gap-2">
           <img src={logo} alt="Calmora Foundation" className="h-14 object-contain" />
           <span className="font-display text-xl font-bold text-gradient hidden sm:inline">Foundation</span>
+        </Link> */}
+        <Link to="/" className="flex items-center justify-center gap-2">
+          <span className="text-3xl font-bold hidden sm:inline relative">
+            {/* Calm */}
+            <span
+              style={{
+                fontFamily: "Le Jour Serif",
+                color: "#3EA7B2",
+              }}
+            >
+              Calm
+            </span>
+
+            {/* O with semicolon below */}
+            <span className="relative inline-block">
+              {/* Gradient O */}
+              <span
+                style={{
+                  fontFamily: "Le Jour Serif",
+                  background: "linear-gradient(90deg, #A5DBDF, #53768E)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                o
+              </span>
+            </span>
+
+            {/* ra */}
+            <span
+              style={{
+                fontFamily: "Le Jour Serif",
+                color: "#3EA7B2",
+              }}
+            >
+              ra
+            </span>
+          </span>
+
         </Link>
 
         {/* Desktop */}
@@ -29,7 +68,9 @@ const Navbar = () => {
               key={item.path}
               to={item.path}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === item.path ? "text-primary" : "text-muted-foreground"
+                location.pathname === item.path
+                  ? "text-primary"
+                  : "text-muted-foreground"
               }`}
             >
               {item.label}
@@ -44,7 +85,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-foreground"
+        >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -58,7 +102,9 @@ const Navbar = () => {
               to={item.path}
               onClick={() => setOpen(false)}
               className={`block py-3 text-sm font-medium border-b border-border/50 ${
-                location.pathname === item.path ? "text-primary" : "text-muted-foreground"
+                location.pathname === item.path
+                  ? "text-primary"
+                  : "text-muted-foreground"
               }`}
             >
               {item.label}

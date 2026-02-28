@@ -40,7 +40,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-2">
                 <MapPin size={14} className="mt-1 flex-shrink-0" />
-                <span>98-A, Third Floor, Namberdar Estate, Taimoor Nagar, New Friends Colony, New Delhi - 110065</span>
+                <span>98-B, Third Floor, Namberdar Estate, Taimoor Nagar, New Friends Colony, New Delhi - 110065</span>
               </div>
             </div>
           </div>

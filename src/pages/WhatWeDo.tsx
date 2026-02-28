@@ -8,7 +8,8 @@ import counseling from "@/assets/counseling.jpeg";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
-    opacity: 1, y: 0,
+    opacity: 1,
+    y: 0,
     transition: { delay: i * 0.1, duration: 0.5 },
   }),
 };
@@ -17,39 +18,80 @@ const programs = [
   {
     icon: School,
     title: "School Mental Health Systems",
-    items: ["Emotional literacy curriculum", "Risk screening & early identification", "Teacher sensitization training", "Student resilience workshops"],
+    items: [
+      "Emotional literacy curriculum",
+      "Risk screening & early identification",
+      "Teacher sensitization training",
+      "Student resilience workshops",
+    ],
   },
   {
     icon: Users,
     title: "Community Mental Health Outreach",
-    items: ["Group interventions", "Awareness campaigns", "Psychological first-aid workshops"],
+    items: [
+      "Group interventions",
+      "Awareness campaigns",
+      "Psychological first-aid workshops",
+    ],
   },
   {
     icon: Heart,
     title: "Women & Men Support Circles",
-    items: ["Trauma-informed sessions", "Stress & burnout management", "Emotional regulation frameworks"],
+    items: [
+      "Trauma-informed sessions",
+      "Stress & burnout management",
+      "Emotional regulation frameworks",
+    ],
   },
   {
     icon: Briefcase,
     title: "Youth & Professional Programs",
-    items: ["Career anxiety management", "Confidence and coping skill training", "Structured therapy access pathways"],
+    items: [
+      "Career anxiety management",
+      "Confidence and coping skill training",
+      "Structured therapy access pathways",
+    ],
   },
 ];
 
 const audiences = [
-  { icon: School, label: "Schools & Universities", desc: "Students, teachers, and educational institutions" },
-  { icon: Users, label: "Underserved Communities", desc: "Marginalized groups with limited mental health access" },
-  { icon: Heart, label: "Women & Youth", desc: "Empowerment through emotional resilience" },
-  { icon: Briefcase, label: "Professionals", desc: "Burnout prevention and stress management" },
+  {
+    img: "/audiences/Schools.webp",
+    label: "Schools & Universities",
+    desc: "Students, teachers, and educational institutions",
+  },
+  {
+    img: "/audiences/unserved.jpeg",
+    label: "Underserved Communities",
+    desc: "Marginalized groups with limited mental health access",
+  },
+  {
+    img: "/audiences/women.jpg",
+    label: "Women & Youth",
+    desc: "Empowerment through emotional resilience",
+  },
+  {
+    img: "/audiences/professionals.jpg",
+    label: "Professionals",
+    desc: "Burnout prevention and stress management",
+  },
 ];
 
 const team = [
-  { name: "Sadaf Saeed", role: "Founder & Director" },
-  { name: "Seema Raturi", role: "President" },
-  { name: "Manya Sethi", role: "Vice President" },
-  { name: "Jyotika Das", role: "Counselling Psychologist" },
-  { name: "Anam Mushtaq", role: "Applied Research Psychologist" },
-  { name: "Raj Manya", role: "Affiliate Psychologist" },
+  { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf.jpeg" },
+  { name: "Seema Raturi", role: "President", img: "/team/Seema.jpeg" },
+  { name: "Manya Sethi", role: "Vice President", img: "/team/Manya.jpeg" },
+  {
+    name: "Jyotika Das",
+    role: "Counselling Psychologist",
+    img: "/team/Jyotika.jpeg",
+  },
+  {
+    name: "Anam Mushtaq",
+    role: "Applied Research Psychologist",
+    img: "/team/Anam.jpeg",
+  },
+  { name: "Raj Manya", role: "Affiliate Psychologist", img: "/team/Raj.jpeg" },
 ];
 
 const WhatWeDo = () => {
@@ -58,17 +100,24 @@ const WhatWeDo = () => {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={skillTraining} alt="Our work" className="w-full h-full object-cover" />
+          {/* <img src={skillTraining} alt="Our work" className="w-full h-full object-cover" /> */}
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Our Work</p>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Our Work
+            </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              What We Do
+              About Us
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-lg">
-              Structured, ethical, and scalable mental health interventions delivered with clinical excellence.
+              Structured, ethical, and scalable mental health interventions
+              delivered with clinical excellence.
             </p>
           </motion.div>
         </div>
@@ -77,11 +126,23 @@ const WhatWeDo = () => {
       {/* Mission */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+          >
             <Brain className="mx-auto text-primary mb-4" size={40} />
-            <h2 className="font-display text-3xl font-bold text-foreground mb-4">Our Mission</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+              Our Mission
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
-              To deliver structured psychological risk identification, prevention, and intervention peacefully and ethically across communities. We normalize mental health conversations, strengthen emotional resilience, and reduce psychological crisis cases through early detection.
+              To deliver structured psychological risk identification,
+              prevention, and intervention peacefully and ethically across
+              communities. We normalize mental health conversations, strengthen
+              emotional resilience, and reduce psychological crisis cases
+              through early detection.
             </p>
           </motion.div>
         </div>
@@ -91,8 +152,12 @@ const WhatWeDo = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Our Services</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Program Verticals</h2>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Our Services
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Program Verticals
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {programs.map((prog, i) => (
@@ -106,10 +171,15 @@ const WhatWeDo = () => {
                 className="bg-card rounded-xl p-8 shadow-card hover:shadow-soft transition-shadow"
               >
                 <prog.icon className="text-primary mb-4" size={32} />
-                <h3 className="font-display text-xl font-bold text-foreground mb-4">{prog.title}</h3>
+                <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                  {prog.title}
+                </h3>
                 <ul className="space-y-2">
                   {prog.items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-start gap-2">
+                    <li
+                      key={item}
+                      className="text-sm text-muted-foreground flex items-start gap-2"
+                    >
                       <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
                       {item}
                     </li>
@@ -125,8 +195,12 @@ const WhatWeDo = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Our Impact</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Work in Action</h2>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Our Impact
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Work in Action
+            </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[classroom, counseling, workshop, skillTraining].map((img, i) => (
@@ -150,8 +224,12 @@ const WhatWeDo = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Who We Serve</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Our Target Audience</h2>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Who We Serve
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Our Target Audience
+            </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {audiences.map((a, i) => (
@@ -162,11 +240,22 @@ const WhatWeDo = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-xl p-6 text-center shadow-card"
+                className="bg-card rounded-xl overflow-hidden shadow-card"
               >
-                <a.icon className="mx-auto text-primary mb-3" size={28} />
-                <h4 className="font-display text-lg font-semibold text-foreground mb-2">{a.label}</h4>
-                <p className="text-sm text-muted-foreground">{a.desc}</p>
+                {/* IMAGE */}
+                <img
+                  src={a.img}
+                  alt={a.label}
+                  className="w-full h-40 object-cover"
+                />
+
+                {/* INFO */}
+                <div className="p-6 text-center">
+                  <h4 className="font-display text-lg font-semibold text-foreground mb-2">
+                    {a.label}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">{a.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -177,10 +266,15 @@ const WhatWeDo = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Our People</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Core Team</h2>
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Our People
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Core Team
+            </h2>
             <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm">
-              Our team combines clinical expertise, operational management, and community outreach experience.
+              Our team combines clinical expertise, operational management, and
+              community outreach experience.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -194,11 +288,19 @@ const WhatWeDo = () => {
                 variants={fadeUp}
                 className="bg-card rounded-xl p-6 text-center shadow-card border border-border"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-primary mx-auto mb-4 flex items-center justify-center text-primary-foreground font-bold text-lg">
-                  {member.name.split(" ").map(n => n[0]).join("")}
-                </div>
-                <h4 className="font-display text-lg font-semibold text-foreground">{member.name}</h4>
-                <p className="text-sm text-muted-foreground mt-1">{member.role}</p>
+                {/* TEAM IMAGE */}
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
+                />
+
+                <h4 className="font-display text-lg font-semibold text-foreground">
+                  {member.name}
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {member.role}
+                </p>
               </motion.div>
             ))}
           </div>
