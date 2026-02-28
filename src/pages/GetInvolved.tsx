@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Handshake,
   Heart,
@@ -8,6 +8,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import teamOutdoor from "@/assets/team-outdoor.jpeg";
+import { useEffect } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -55,6 +56,19 @@ const ways = [
 ];
 
 const GetInvolved = () => {
+  const location = useLocation();
+
+ useEffect(() => {
+  if (location.hash) {
+    setTimeout(() => {
+      const el = document.getElementById(location.hash.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100); // 🔥 wait for page render
+  }
+}, [location]);
+
   return (
     <main className="pt-16">
       {/* Hero */}
@@ -137,7 +151,7 @@ const GetInvolved = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30" id="donate">
         <div className="container mx-auto px-4">
           {/* Heading */}
           <div className="text-center mb-14">
@@ -157,7 +171,6 @@ const GetInvolved = () => {
           <div className="grid lg:grid-cols-2 gap-10 max-w-4xl mx-auto items-center">
             {/* QR CODE */}
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border text-center">
-
               <img
                 src="/donate/qr.jpeg" // 🔥 put your QR image in public folder
                 alt="Donate QR Code"

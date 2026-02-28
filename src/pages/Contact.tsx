@@ -292,7 +292,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-secondary rounded-xl p-6">
+              {/* <div className="bg-secondary rounded-xl p-6">
                 <p className="text-sm text-muted-foreground">
                   <strong className="text-foreground">Website:</strong>{" "}
                   <a
@@ -304,7 +304,7 @@ const Contact = () => {
                     www.calmorafoundation.org
                   </a>
                 </p>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

@@ -11,7 +11,8 @@ import dignitaries from "@/assets/dignitaries.jpeg";
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
-    opacity: 1, y: 0,
+    opacity: 1,
+    y: 0,
     transition: { delay: i * 0.1, duration: 0.5 },
   }),
 };
@@ -29,80 +30,92 @@ const Index = () => {
       {/* Hero */}
      <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
 
-  {/* 🌈 Animated Gradient Mesh */}
-  <div className="absolute inset-0 -z-10">
-    <div className="absolute w-[700px] h-[700px] bg-primary/25 rounded-full blur-[160px] top-[-20%] left-[-10%] animate-pulse" />
-    <div className="absolute w-[600px] h-[600px] bg-accent/25 rounded-full blur-[160px] bottom-[-20%] right-[-10%] animate-pulse" />
-  </div>
+  {/* 🌈 Soft gradient atmosphere */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
 
-  {/* ✨ Light Rays */}
-  <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_60%)]" />
+  {/* 🎨 Decorative shape */}
+  <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[1200px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10" />
 
-  <div className="container mx-auto px-4">
+  <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9 }}
-      className="max-w-4xl mx-auto text-center"
-    >
+    {/* LEFT */}
+    <div className="relative">
 
-      {/* Tag */}
-      <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide mb-6">
+      {/* Accent bar */}
+      <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
+
+      <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-6">
         Preventive Mental Health Care
-      </div>
-
-      {/* Heading */}
-      <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
-        Building Emotionally{" "}
-        <span className="bg-gradient-primary bg-clip-text text-transparent">
-          Resilient
-        </span>{" "}
-        Communities
-      </h1>
-
-      {/* Description */}
-      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-        Structured psychological care across schools, communities, and institutions — before crisis strikes.
       </p>
 
-      {/* Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-16">
+      <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
+        Strong Minds.
+        <br />
+        Healthy Communities.
+      </h1>
+
+      <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
+        Calmora Foundation provides structured psychological support across
+        schools, institutions, and underserved communities — before crisis begins.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
         <Link
           to="/get-involved"
-          className="bg-gradient-primary text-primary-foreground px-10 py-4 rounded-xl font-semibold text-sm shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
+          className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
         >
-          Support Our Mission <ArrowRight size={16} />
+          Support Our Mission
         </Link>
 
         <Link
           to="/what-we-do"
-          className="border border-border px-10 py-4 rounded-xl font-semibold text-sm hover:bg-muted transition-colors"
+          className="border border-border px-8 py-4 rounded-xl font-semibold hover:bg-muted transition"
         >
-          Learn More
+          Our Programs
         </Link>
       </div>
+    </div>
 
-      {/* 🪟 Floating Glass Cards */}
-      <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-        {[
-          { num: "10K+", label: "Lives Impacted" },
-          { num: "50+", label: "Programs" },
-          { num: "20+", label: "Partners" },
-        ].map((s) => (
-          <div
-            key={s.label}
-            className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl py-6"
-          >
-            <p className="text-3xl font-bold text-primary">{s.num}</p>
-            <p className="text-sm text-muted-foreground">{s.label}</p>
+    {/* RIGHT — Floating Impact Card */}
+    <div className="relative">
+
+      <div className="absolute -inset-4 bg-primary/10 blur-2xl rounded-3xl" />
+
+      <div className="relative bg-card border border-border rounded-3xl p-10 shadow-2xl">
+
+        <h3 className="font-display text-2xl font-bold mb-6">
+          Why Calmora Matters
+        </h3>
+
+        <ul className="space-y-5 text-muted-foreground">
+          <li>• Early mental health intervention programs</li>
+          <li>• School & university partnerships</li>
+          <li>• Community resilience initiatives</li>
+          <li>• Professional burnout prevention</li>
+        </ul>
+
+        <div className="grid grid-cols-3 gap-6 mt-10 text-center">
+          <div>
+            <p className="text-3xl font-bold text-primary">10K+</p>
+            <p className="text-xs text-muted-foreground">Lives Reached</p>
           </div>
-        ))}
-      </div>
+          <div>
+            <p className="text-3xl font-bold text-primary">50+</p>
+            <p className="text-xs text-muted-foreground">Programs</p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold text-primary">20+</p>
+            <p className="text-xs text-muted-foreground">Partners</p>
+          </div>
+        </div>
 
-    </motion.div>
+      </div>
+    </div>
 
   </div>
+
+  {/* 🌊 Curved bottom */}
+  <div className="absolute bottom-0 left-0 w-full h-24 bg-background rounded-t-[100%]" />
 
 </section>
 
@@ -121,8 +134,12 @@ const Index = () => {
                 variants={fadeUp}
                 className="text-center text-primary-foreground"
               >
-                <p className="font-display text-3xl md:text-4xl font-bold">{stat.value}</p>
-                <p className="text-sm mt-1 text-primary-foreground/70">{stat.label}</p>
+                <p className="font-display text-3xl md:text-4xl font-bold">
+                  {stat.value}
+                </p>
+                <p className="text-sm mt-1 text-primary-foreground/70">
+                  {stat.label}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -140,15 +157,26 @@ const Index = () => {
               variants={fadeUp}
               custom={0}
             >
-              <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Who We Are</p>
+              <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+                Who We Are
+              </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                A Foundation Committed to <span className="text-gradient">Preventive Care</span>
+                A Foundation Committed to{" "}
+                <span className="text-gradient">Preventive Care</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Calmora Foundation is a legally registered mental health foundation focused on preventive, community-based psychological care. We bridge the gap between professional psychology and community accessibility.
+                Calmora Foundation is a legally registered mental health
+                foundation focused on preventive, community-based psychological
+                care. We bridge the gap between professional psychology and
+                community accessibility.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Mental health challenges are rising — anxiety in students, burnout in professionals, unaddressed trauma in vulnerable communities. Most support begins at crisis stage. <strong className="text-foreground">Calmora works before crisis.</strong>
+                Mental health challenges are rising — anxiety in students,
+                burnout in professionals, unaddressed trauma in vulnerable
+                communities. Most support begins at crisis stage.{" "}
+                <strong className="text-foreground">
+                  Calmora works before crisis.
+                </strong>
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -157,9 +185,14 @@ const Index = () => {
                   { icon: BookOpen, label: "Early Detection" },
                   { icon: Shield, label: "Ethical Standards" },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center gap-3 p-3 rounded-lg bg-secondary">
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary"
+                  >
                     <item.icon size={20} className="text-primary" />
-                    <span className="text-sm font-medium text-foreground">{item.label}</span>
+                    <span className="text-sm font-medium text-foreground">
+                      {item.label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -172,10 +205,26 @@ const Index = () => {
               custom={2}
               className="grid grid-cols-2 gap-4"
             >
-              <img src={classroom} alt="Classroom session" className="rounded-xl shadow-card w-full h-48 object-cover" />
-              <img src={counseling} alt="Counseling" className="rounded-xl shadow-card w-full h-48 object-cover mt-8" />
-              <img src={award} alt="Award ceremony" className="rounded-xl shadow-card w-full h-48 object-cover" />
-              <img src={teamOutdoor} alt="Team" className="rounded-xl shadow-card w-full h-48 object-cover mt-8" />
+              <img
+                src={classroom}
+                alt="Classroom session"
+                className="rounded-xl shadow-card w-full h-48 object-cover"
+              />
+              <img
+                src={counseling}
+                alt="Counseling"
+                className="rounded-xl shadow-card w-full h-48 object-cover mt-8"
+              />
+              <img
+                src={award}
+                alt="Award ceremony"
+                className="rounded-xl shadow-card w-full h-48 object-cover"
+              />
+              <img
+                src={teamOutdoor}
+                alt="Team"
+                className="rounded-xl shadow-card w-full h-48 object-cover mt-8"
+              />
             </motion.div>
           </div>
         </div>
@@ -196,7 +245,7 @@ const Index = () => {
               <img
                 src={dignitaries}
                 alt="Founder Ms. Sadaf Saeed"
-                className="rounded-2xl shadow-soft w-full max-w-md mx-auto object-cover h-[400px]"
+                className="rounded-2xl shadow-soft w-full max-w-md mx-auto object-cover h-[500px]"
               />
             </motion.div>
             <motion.div
@@ -207,12 +256,17 @@ const Index = () => {
               custom={1}
               className="order-1 lg:order-2"
             >
-              <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">Leadership</p>
+              <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+                Leadership
+              </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Founded by <span className="text-gradient">Ms. Sadaf Saeed</span>
+                Founded by{" "}
+                <span className="text-gradient">Ms. Sadaf Saeed</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                RCI Licensed Psychologist with 10+ years of practice. Recognized for conducting extensive workshops for underprivileged communities.
+                RCI Licensed Psychologist with 10+ years of practice. Recognized
+                for conducting extensive workshops for underprivileged
+                communities.
               </p>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
@@ -221,11 +275,13 @@ const Index = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  Awarded Global Mental Health Leadership 2024 by World Health Congress
+                  Awarded Global Mental Health Leadership 2024 by World Health
+                  Congress
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  Ensures clinical credibility, ethical standards, and structured program design
+                  Ensures clinical credibility, ethical standards, and
+                  structured program design
                 </li>
               </ul>
             </motion.div>
@@ -243,9 +299,12 @@ const Index = () => {
             variants={fadeUp}
             custom={0}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Invest in Prevention. Invest in Hope.</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Invest in Prevention. Invest in Hope.
+            </h2>
             <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
-              Partner with Calmora Foundation to build emotionally resilient communities through sustainable mental health systems.
+              Partner with Calmora Foundation to build emotionally resilient
+              communities through sustainable mental health systems.
             </p>
             <Link
               to="/contact"
