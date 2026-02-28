@@ -27,46 +27,85 @@ const Index = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          {/* <img src={groupPhoto} alt="Calmora team" className="w-full h-full object-cover" /> */}
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-2xl"
+     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+
+  {/* 🌈 Animated Gradient Mesh */}
+  <div className="absolute inset-0 -z-10">
+    <div className="absolute w-[700px] h-[700px] bg-primary/25 rounded-full blur-[160px] top-[-20%] left-[-10%] animate-pulse" />
+    <div className="absolute w-[600px] h-[600px] bg-accent/25 rounded-full blur-[160px] bottom-[-20%] right-[-10%] animate-pulse" />
+  </div>
+
+  {/* ✨ Light Rays */}
+  <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15),transparent_60%)]" />
+
+  <div className="container mx-auto px-4">
+
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+      className="max-w-4xl mx-auto text-center"
+    >
+
+      {/* Tag */}
+      <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide mb-6">
+        Preventive Mental Health Care
+      </div>
+
+      {/* Heading */}
+      <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
+        Building Emotionally{" "}
+        <span className="bg-gradient-primary bg-clip-text text-transparent">
+          Resilient
+        </span>{" "}
+        Communities
+      </h1>
+
+      {/* Description */}
+      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+        Structured psychological care across schools, communities, and institutions — before crisis strikes.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <Link
+          to="/get-involved"
+          className="bg-gradient-primary text-primary-foreground px-10 py-4 rounded-xl font-semibold text-sm shadow-lg hover:scale-105 transition-transform flex items-center gap-2"
+        >
+          Support Our Mission <ArrowRight size={16} />
+        </Link>
+
+        <Link
+          to="/what-we-do"
+          className="border border-border px-10 py-4 rounded-xl font-semibold text-sm hover:bg-muted transition-colors"
+        >
+          Learn More
+        </Link>
+      </div>
+
+      {/* 🪟 Floating Glass Cards */}
+      <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+        {[
+          { num: "10K+", label: "Lives Impacted" },
+          { num: "50+", label: "Programs" },
+          { num: "20+", label: "Partners" },
+        ].map((s) => (
+          <div
+            key={s.label}
+            className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl py-6"
           >
-            <p className="text-primary-foreground/80 text-sm font-semibold tracking-widest uppercase mb-4">
-              Preventive Mental Health Care
-            </p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Building Emotionally{" "}
-              <span className="text-primary">Resilient</span>{" "}
-              Communities
-            </h1>
-            <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
-              Calmora Foundation delivers structured psychological care across schools, communities, and institutions — before crisis strikes.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to="/get-involved"
-                className="bg-gradient-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
-              >
-                Support Our Mission <ArrowRight size={16} />
-              </Link>
-              <Link
-                to="/what-we-do"
-                className="border border-primary-foreground/30 text-primary-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:bg-primary-foreground/10 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            <p className="text-3xl font-bold text-primary">{s.num}</p>
+            <p className="text-sm text-muted-foreground">{s.label}</p>
+          </div>
+        ))}
+      </div>
+
+    </motion.div>
+
+  </div>
+
+</section>
+
 
       {/* Stats */}
       <section className="bg-gradient-primary py-12">
