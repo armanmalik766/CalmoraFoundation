@@ -16,7 +16,7 @@ const fadeUp = {
 
 const programs = [
   {
-    icon: School,
+    img: "/programs/Schools.webp",
     title: "School Mental Health Systems",
     items: [
       "Emotional literacy curriculum",
@@ -26,7 +26,7 @@ const programs = [
     ],
   },
   {
-    icon: Users,
+    img: "/programs/workshop.jpeg",
     title: "Community Mental Health Outreach",
     items: [
       "Group interventions",
@@ -35,7 +35,7 @@ const programs = [
     ],
   },
   {
-    icon: Heart,
+    img: "/programs/women.jpg",
     title: "Women & Men Support Circles",
     items: [
       "Trauma-informed sessions",
@@ -44,7 +44,7 @@ const programs = [
     ],
   },
   {
-    icon: Briefcase,
+    img: "/programs/professionals.jpg",
     title: "Youth & Professional Programs",
     items: [
       "Career anxiety management",
@@ -168,23 +168,33 @@ const WhatWeDo = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-xl p-8 shadow-card hover:shadow-soft transition-shadow"
+                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-shadow"
               >
-                <prog.icon className="text-primary mb-4" size={32} />
-                <h3 className="font-display text-xl font-bold text-foreground mb-4">
-                  {prog.title}
-                </h3>
-                <ul className="space-y-2">
-                  {prog.items.map((item) => (
-                    <li
-                      key={item}
-                      className="text-sm text-muted-foreground flex items-start gap-2"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                {/* 🖼️ IMAGE */}
+                <img
+                  src={prog.img}
+                  alt={prog.title}
+                  className="w-full h-80 object-cover"
+                />
+
+                {/* CONTENT */}
+                <div className="p-8">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4">
+                    {prog.title}
+                  </h3>
+
+                  <ul className="space-y-2">
+                    {prog.items.map((item) => (
+                      <li
+                        key={item}
+                        className="text-sm text-muted-foreground flex items-start gap-2"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>
