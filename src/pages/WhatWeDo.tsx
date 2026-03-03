@@ -56,7 +56,7 @@ const programs = [
 
 const audiences = [
   {
-    img: "/audiences/Schools.webp",
+    img: "/audiences/classroom.jpeg",
     label: "Schools & Universities",
     desc: "Students, teachers, and educational institutions",
   },
@@ -66,7 +66,12 @@ const audiences = [
     desc: "Marginalized groups with limited mental health access",
   },
   {
-    img: "/audiences/women.jpg",
+    img: "/audiences/unserved.jpeg",
+    label: "Cancer & Abuse Survivors",
+    desc: "Care for cancer survivors and individuals affected by childhood abuse.",
+  },
+  {
+    img: "/audiences/women.jpeg",
     label: "Women & Youth",
     desc: "Empowerment through emotional resilience",
   },
@@ -77,10 +82,33 @@ const audiences = [
   },
 ];
 
+const advisory = [
+  {
+    img: "/advisory/advisor1.jpg",
+    name: "Dr. Riya Sharma",
+    role: "Senior Clinical Psychologist",
+  },
+  {
+    img: "/advisory/advisor2.jpg",
+    name: "Prof. Arjun Mehta",
+    role: "Mental Health Policy Advisor",
+  },
+  {
+    img: "/advisory/advisor3.jpg",
+    name: "Dr. Sana Qureshi",
+    role: "Community Mental Health Specialist",
+  },
+  {
+    img: "/advisory/advisor4.jpg",
+    name: "Anita Kapoor",
+    role: "Youth Development Strategist",
+  },
+];
+
 const team = [
   { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf.jpeg" },
   { name: "Seema Raturi", role: "President", img: "/team/Seema.jpeg" },
-  { name: "Manya Sethi", role: "Vice President", img: "/team/Manya.jpeg" },
+  { name: "Manya Sethi", role: "Vice President", img: "/team/Manya1.jpeg" },
   {
     name: "Jyotika Das",
     role: "Counselling Psychologist",
@@ -91,7 +119,11 @@ const team = [
     role: "Applied Research Psychologist",
     img: "/team/Anam.jpeg",
   },
-  { name: "Raj Manya", role: "Affiliate Psychologist", img: "/team/Raj.jpeg" },
+  {
+    name: "Raj Manya",
+    role: "Counselling Psychologist",
+    img: "/team/Raj.jpeg",
+  },
 ];
 
 const WhatWeDo = () => {
@@ -148,8 +180,52 @@ const WhatWeDo = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Leadership & Guidance
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Advisory Board
+            </h2>
+          </div>
+
+          {/* Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advisory.map((member, i) => (
+              <motion.div
+                key={member.name}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-shadow"
+              >
+                {/* Image */}
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-48 object-cover"
+                />
+
+                {/* Info */}
+                <div className="p-6 text-center">
+                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">{member.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Programs */}
-      <section className="py-20 bg-secondary">
+      {/* <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
@@ -170,14 +246,12 @@ const WhatWeDo = () => {
                 variants={fadeUp}
                 className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-shadow"
               >
-                {/* 🖼️ IMAGE */}
                 <img
                   src={prog.img}
                   alt={prog.title}
                   className="w-full h-80 object-cover"
                 />
 
-                {/* CONTENT */}
                 <div className="p-8">
                   <h3 className="font-display text-xl font-bold text-foreground mb-4">
                     {prog.title}
@@ -199,7 +273,7 @@ const WhatWeDo = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Gallery */}
       <section className="py-20 bg-background">
@@ -241,7 +315,7 @@ const WhatWeDo = () => {
               Our Target Audience
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {audiences.map((a, i) => (
               <motion.div
                 key={a.label}
@@ -268,6 +342,53 @@ const WhatWeDo = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          {/* 📘 BOOK IMAGE */}
+          <div className="relative flex justify-center">
+            <div className="absolute -inset-6 bg-primary/10 blur-2xl rounded-3xl" />
+            <img
+              src="/book/book.jpeg" // put your book image in public/book/
+              alt="The Art of Being Unshakable"
+              className="relative w-80 md:w-96 rounded-2xl shadow-2xl"
+            />
+          </div>
+
+          {/* 📝 BOOK CONTENT */}
+          <div className="max-w-xl">
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
+              Featured Publication
+            </p>
+
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+              The Art of Being Unshakable
+            </h2>
+
+            <p className="text-muted-foreground mb-6">By Seema Raturi</p>
+
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              What if calm wasn’t something you found, but something you built?
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              In a world that rewards urgency, noise, and constant reaction,
+              staying steady can feel impossible. But unshakable people are not
+              born different — they practice differently.
+            </p>
+
+            <ul className="space-y-3 mb-8 text-muted-foreground">
+              <li>• A mind that questions fear instead of obeying it</li>
+              <li>• A heart that feels deeply without collapsing</li>
+              <li>• A presence that remains grounded when everything shifts</li>
+              <li>• Confidence built on self-trust, not validation</li>
+            </ul>
+
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Because the world may remain chaotic — but you can become steady.
+            </p>
           </div>
         </div>
       </section>
@@ -302,7 +423,7 @@ const WhatWeDo = () => {
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-16 h-16 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
+                  className="w-40 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
                 />
 
                 <h4 className="font-display text-lg font-semibold text-foreground">

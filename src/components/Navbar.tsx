@@ -21,7 +21,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Calmora Foundation"
-            className="h-28 object-contain"
+            className="h-40 object-contain"
           />
         </Link>
 

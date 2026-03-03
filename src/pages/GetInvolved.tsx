@@ -7,7 +7,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
-import teamOutdoor from "@/assets/team-outdoor.jpeg";
+import teamOutdoor from "@/assets/women.jpeg";
 import { useEffect } from "react";
 
 const fadeUp = {
