@@ -147,7 +147,7 @@ const WhatWeDo = () => {
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               About Calmora Foundation
             </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-lg">
+            <p className="text-primary-foreground/70 text-lg max-w-4xl">
               Calmora Foundation is a New Delhi-based non-profit organization
               focused on structured psycho-social stabilization and mental
               health system integration in India. Our work bridges
@@ -158,51 +158,56 @@ const WhatWeDo = () => {
         </div>
       </section>
 
+     <section className="py-24 bg-background">
+  <div className="container mx-auto px-4">
+    
+    <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
       {/* Mission */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={0}
-          >
-            <Brain className="mx-auto text-primary mb-4" size={40} />
-            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Our Mission
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              To design and implement scalable psycho-social support systems
-              that strengthen oncology counseling chronic illness mental health
-              care, and underserved community outreach programs.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        custom={0}
+        className="bg-card rounded-2xl p-8 shadow-card text-center"
+      >
+        <Brain className="mx-auto text-primary mb-4" size={36} />
+        <h2 className="font-display text-4xl font-bold text-foreground mb-4">
+          Our Mission
+        </h2>
+        <p className="text-muted-foreground leading-relaxed text-md">
+          To design and implement scalable psycho-social support systems that
+          strengthen oncology counseling, chronic illness mental health care,
+          and underserved community outreach programs.
+        </p>
+      </motion.div>
 
       {/* Vision */}
-      <section className="pb-20 bg-background">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={0}
-          >
-            <Brain className="mx-auto text-primary mb-4" size={40} />
-            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Our Vision
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              An integrated healthcare ecosystem where psychological risk
-              management operates alongside medical treatment pathways across
-              hospitals and communities.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+        custom={1}
+        className="bg-card rounded-2xl p-8 shadow-card text-center"
+      >
+        <Brain className="mx-auto text-primary mb-4" size={36} />
+        <h2 className="font-display text-4xl font-bold text-foreground mb-4">
+          Our Vision
+        </h2>
+        <p className="text-muted-foreground leading-relaxed text-md">
+          An integrated healthcare ecosystem where psychological risk management
+          operates alongside medical treatment pathways across hospitals and
+          communities.
+        </p>
+      </motion.div>
+
+    </div>
+
+  </div>
+</section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           {/* Heading */}

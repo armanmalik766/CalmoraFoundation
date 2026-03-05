@@ -89,7 +89,7 @@ const GetInvolved = () => {
           <img
             src={teamOutdoor}
             alt="Get involved"
-            className="w-full h-[150%] object-cover"
+            className="w-full h-[180%] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
@@ -260,7 +260,7 @@ const GetInvolved = () => {
               ))}
             </div>
             <Link
-              to="/contact"
+              to="/contact#contact-form"
               className="inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               Contact Us <ArrowRight size={16} />
