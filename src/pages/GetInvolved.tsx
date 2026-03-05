@@ -6,6 +6,7 @@ import {
   GraduationCap,
   ArrowRight,
   CheckCircle,
+  Phone,
 } from "lucide-react";
 import teamOutdoor from "@/assets/women.jpeg";
 import { useEffect } from "react";
@@ -53,21 +54,32 @@ const ways = [
       "Certificate of completion",
     ],
   },
+  {
+    icon: Phone, // import from lucide-react
+    title: "Tele-Counselling",
+    desc: "Access professional mental health support remotely through confidential tele-counselling sessions.",
+    items: [
+      "Confidential one-on-one sessions",
+      "Accessible from anywhere",
+      "Guidance from trained professionals",
+      "Flexible appointment scheduling",
+    ],
+  },
 ];
 
 const GetInvolved = () => {
   const location = useLocation();
 
- useEffect(() => {
-  if (location.hash) {
-    setTimeout(() => {
-      const el = document.getElementById(location.hash.substring(1));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100); // 🔥 wait for page render
-  }
-}, [location]);
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.substring(1));
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); // 🔥 wait for page render
+    }
+  }, [location]);
 
   return (
     <main className="pt-16">
@@ -91,7 +103,7 @@ const GetInvolved = () => {
               Join Us
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              Get Involved
+              Services
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-lg">
               Multiple ways to contribute to building emotionally resilient

@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="font-display text-2xl font-bold mb-4">Calmora Foundation</h3>
             <p className="text-background/70 text-sm leading-relaxed max-w-md">
-              Building emotionally resilient communities through preventive, structured, and ethical mental health care. Registered | 12A Certified | 80G Compliant.
+              Building emotionally resilient communities through preventive, structured, and ethical mental health care. Registered | 12A Certified | 80G Compliant | CSR-1 Registered.
             </p>
           </div>
 
@@ -19,7 +19,7 @@ const Footer = () => {
               {[
                 { label: "About Us", path: "/" },
                 { label: "Our Programs", path: "/what-we-do" },
-                { label: "Get Involved", path: "/get-involved" },
+                { label: "Services", path: "/get-involved" },
                 { label: "Contact Us", path: "/contact" },
               ].map((link) => (
                 <Link key={link.path} to={link.path} className="text-sm text-background/60 hover:text-background transition-colors">

@@ -96,7 +96,7 @@ const Contact = () => {
           <img
             src={award}
             alt="Contact us"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
@@ -110,15 +110,105 @@ const Contact = () => {
               Reach Out
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              Contact Us
+              About Project HAUSLA{" "}
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-lg">
-              Have a question, want to collaborate, or need support? We'd love
-              to hear from you.
+              For hospital partnerships, CSR collaborations, grants, or
+              community implementation of Project HAUSLA, please fill out the
+              form below and our team will connect with you.
             </p>
           </motion.div>
         </div>
       </section>
+
+     <section className="py-24 bg-secondary">
+  <div className="container mx-auto px-4">
+
+    {/* Section header */}
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+        Project HAUSLA
+      </h1>
+      <p className="text-lg text-muted-foreground">
+        Integrated Psycho-Social Stabilization Framework designed to support
+        hospitals, caregivers, and communities through structured mental health
+        interventions.
+      </p>
+    </div>
+
+    {/* What HAUSLA Addresses */}
+    <div className="mb-20">
+      <h2 className="font-display text-2xl font-bold text-center mb-10">
+        What HAUSLA Addresses
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          "Oncology survivorship mental health",
+          "Chronic illness psychological adjustment",
+          "Community-level distress stabilization",
+          "Mental hygiene education",
+          "Caregiver resilience development",
+        ].map((item, i) => (
+          <motion.div
+            key={item}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="bg-card p-6 rounded-xl shadow-card"
+          >
+            <p className="text-sm text-foreground font-medium leading-relaxed">
+              {item}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+
+    {/* How HAUSLA Works */}
+    <div className="max-w-5xl mx-auto">
+      <h2 className="font-display text-2xl font-bold text-center mb-10">
+        How HAUSLA Works
+      </h2>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          "Structured Psychological Risk Assessment",
+          "Protocol-Based Psycho-Social Intervention",
+          "Reintegration Planning",
+          "Measurable Outcome Tracking",
+          "Community Reinforcement Systems",
+        ].map((step, i) => (
+          <motion.div
+            key={step}
+            custom={i}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="flex items-start gap-4 bg-card rounded-xl p-6 shadow-card"
+          >
+            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-bold">
+              {i + 1}
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {step}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+
+      <p className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto">
+        The objective is long-term psychosocial resilience — not short-term
+        counseling.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       {/* Contact Form + Info */}
       <section className="py-20 bg-background">

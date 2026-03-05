@@ -42,13 +42,13 @@ const Index = () => {
             <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
 
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-6">
-              Preventive Mental Health Care
+              {/* Preventive Mental Health Care */}
             </p>
 
             <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
-              Strong Minds.
+              Preventing psychological and 
               <br />
-              Healthy Communities.
+              social risks through community action.
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">

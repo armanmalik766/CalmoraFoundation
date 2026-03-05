@@ -66,12 +66,12 @@ const audiences = [
     desc: "Marginalized groups with limited mental health access",
   },
   {
-    img: "/audiences/unserved.jpeg",
+    img: "/audiences/cancer1.jpg",
     label: "Cancer & Abuse Survivors",
     desc: "Care for cancer survivors and individuals affected by childhood abuse.",
   },
   {
-    img: "/audiences/women.jpeg",
+    img: "/audiences/women1.jpeg",
     label: "Women & Youth",
     desc: "Empowerment through emotional resilience",
   },
@@ -85,12 +85,12 @@ const audiences = [
 const advisory = [
   {
     img: "/advisory/advisor1.jpg",
-    name: "Dr. Riya Sharma",
+    name: "Dr. Amandeep Singh",
     role: "Senior Clinical Psychologist",
   },
   {
     img: "/advisory/advisor2.jpg",
-    name: "Prof. Arjun Mehta",
+    name: "Dr. Mohsin Wali",
     role: "Mental Health Policy Advisor",
   },
   {
@@ -145,11 +145,14 @@ const WhatWeDo = () => {
               Our Work
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              About Us
+              About Calmora Foundation
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-lg">
-              Structured, ethical, and scalable mental health interventions
-              delivered with clinical excellence.
+              Calmora Foundation is a New Delhi-based non-profit organization
+              focused on structured psycho-social stabilization and mental
+              health system integration in India. Our work bridges
+              hospital-based psychological support and community-level mental
+              hygiene outreach to reduce long-term psychosocial risk.
             </p>
           </motion.div>
         </div>
@@ -170,16 +173,36 @@ const WhatWeDo = () => {
               Our Mission
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              To deliver structured psychological risk identification,
-              prevention, and intervention peacefully and ethically across
-              communities. We normalize mental health conversations, strengthen
-              emotional resilience, and reduce psychological crisis cases
-              through early detection.
+              To design and implement scalable psycho-social support systems
+              that strengthen oncology counseling chronic illness mental health
+              care, and underserved community outreach programs.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Vision */}
+      <section className="pb-20 bg-background">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+          >
+            <Brain className="mx-auto text-primary mb-4" size={40} />
+            <h2 className="font-display text-3xl font-bold text-foreground mb-4">
+              Our Vision
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              An integrated healthcare ecosystem where psychological risk
+              management operates alongside medical treatment pathways across
+              hospitals and communities.
+            </p>
+          </motion.div>
+        </div>
+      </section>
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           {/* Heading */}
@@ -216,7 +239,7 @@ const WhatWeDo = () => {
                   <h4 className="font-display text-lg font-semibold text-foreground mb-1">
                     {member.name}
                   </h4>
-                  <p className="text-sm text-muted-foreground">{member.role}</p>
+                  {/* <p className="text-sm text-muted-foreground">{member.role}</p> */}
                 </div>
               </motion.div>
             ))}
@@ -224,6 +247,50 @@ const WhatWeDo = () => {
         </div>
       </section>
 
+      {/* Team */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-14">
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
+              Our People
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Core Team
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm">
+              Our team combines clinical expertise, operational management, and
+              community outreach experience.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {team.map((member, i) => (
+              <motion.div
+                key={member.name}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-card rounded-xl p-6 text-center shadow-card border border-border"
+              >
+                {/* TEAM IMAGE */}
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-40 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
+                />
+
+                <h4 className="font-display text-lg font-semibold text-foreground">
+                  {member.name}
+                </h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {member.role}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Programs */}
       {/* <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
@@ -315,7 +382,7 @@ const WhatWeDo = () => {
               Our Target Audience
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {audiences.map((a, i) => (
               <motion.div
                 key={a.label}
@@ -330,7 +397,7 @@ const WhatWeDo = () => {
                 <img
                   src={a.img}
                   alt={a.label}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-80 object-cover"
                 />
 
                 {/* INFO */}
@@ -345,9 +412,8 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-background">
+      {/* <section className="py-24 bg-background">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          {/* 📘 BOOK IMAGE */}
           <div className="relative flex justify-center">
             <div className="absolute -inset-6 bg-primary/10 blur-2xl rounded-3xl" />
             <img
@@ -357,7 +423,6 @@ const WhatWeDo = () => {
             />
           </div>
 
-          {/* 📝 BOOK CONTENT */}
           <div className="max-w-xl">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
               Featured Publication
@@ -391,52 +456,7 @@ const WhatWeDo = () => {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-              Our People
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Core Team
-            </h2>
-            <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm">
-              Our team combines clinical expertise, operational management, and
-              community outreach experience.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {team.map((member, i) => (
-              <motion.div
-                key={member.name}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="bg-card rounded-xl p-6 text-center shadow-card border border-border"
-              >
-                {/* TEAM IMAGE */}
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-40 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
-                />
-
-                <h4 className="font-display text-lg font-semibold text-foreground">
-                  {member.name}
-                </h4>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {member.role}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </section> */}
     </main>
   );
 };
