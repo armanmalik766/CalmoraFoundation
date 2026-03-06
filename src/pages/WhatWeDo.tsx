@@ -106,7 +106,7 @@ const advisory = [
 ];
 
 const team = [
-  { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf.jpeg" },
+  { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf1.jpeg" },
   { name: "Seema Raturi", role: "President", img: "/team/Seema.jpeg" },
   { name: "Manya Sethi", role: "Vice President", img: "/team/Manya1.jpeg" },
   {

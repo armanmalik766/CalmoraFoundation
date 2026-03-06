@@ -124,7 +124,7 @@ const GetInvolved = () => {
               Ways to Contribute
             </h2>
           </div>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {ways.map((way, i) => (
               <motion.div
                 key={way.title}
