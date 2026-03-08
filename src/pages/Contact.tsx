@@ -46,7 +46,7 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({ email: "", phone: "" });
- const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
@@ -133,94 +133,91 @@ const Contact = () => {
         </div>
       </section>
 
-     <section className="py-24 bg-secondary">
-  <div className="container mx-auto px-4">
-
-    {/* Section header */}
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-        Project HAUSLA
-      </h1>
-      <p className="text-lg text-muted-foreground">
-        Integrated Psycho-Social Stabilization Framework designed to support
-        hospitals, caregivers, and communities through structured mental health
-        interventions.
-      </p>
-    </div>
-
-    {/* What HAUSLA Addresses */}
-    <div className="mb-20">
-      <h2 className="font-display text-2xl font-bold text-center mb-10">
-        What HAUSLA Addresses
-      </h2>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[
-          "Oncology survivorship mental health",
-          "Chronic illness psychological adjustment",
-          "Community-level distress stabilization",
-          "Mental hygiene education",
-          "Caregiver resilience development",
-        ].map((item, i) => (
-          <motion.div
-            key={item}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="bg-card p-6 rounded-xl shadow-card"
-          >
-            <p className="text-sm text-foreground font-medium leading-relaxed">
-              {item}
+      <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+          {/* Section header */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Project HAUSLA
+            </h1>
+            <p className="text-lg text-muted-foreground">
+              Integrated Psycho-Social Stabilization Framework designed to
+              support hospitals, caregivers, and communities through structured
+              mental health interventions.
             </p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+          </div>
 
-    {/* How HAUSLA Works */}
-    <div className="max-w-5xl mx-auto">
-      <h2 className="font-display text-2xl font-bold text-center mb-10">
-        How HAUSLA Works
-      </h2>
+          {/* What HAUSLA Addresses */}
+          <div className="mb-20">
+            <h2 className="font-display text-2xl font-bold text-center mb-10">
+              What HAUSLA Addresses
+            </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {[
-          "Structured Psychological Risk Assessment",
-          "Protocol-Based Psycho-Social Intervention",
-          "Reintegration Planning",
-          "Measurable Outcome Tracking",
-          "Community Reinforcement Systems",
-        ].map((step, i) => (
-          <motion.div
-            key={step}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="flex items-start gap-4 bg-card rounded-xl p-6 shadow-card"
-          >
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white text-sm font-bold">
-              {i + 1}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                "Oncology survivorship mental health",
+                "Chronic illness psychological adjustment",
+                "Community-level distress stabilization",
+                "Mental hygiene education",
+                "Caregiver resilience development",
+              ].map((item, i) => (
+                <motion.div
+                  key={item}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="bg-card p-8 rounded-xl shadow-card"
+                >
+                  <p className="text-md text-foreground font-medium leading-relaxed">
+                    {item}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {step}
+          </div>
+
+          {/* How HAUSLA Works */}
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-display text-2xl font-bold text-center mb-10">
+              How HAUSLA Works
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "Structured Psychological Risk Assessment",
+                "Protocol-Based Psycho-Social Intervention",
+                "Reintegration Planning",
+                "Measurable Outcome Tracking",
+                "Community Reinforcement Systems",
+              ].map((step, i) => (
+                <motion.div
+                  key={step}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="flex items-start gap-4 bg-card rounded-xl p-8 shadow-card"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white text-md font-bold">
+                    {i + 1}
+                  </div>
+                  <p className="text-md text-muted-foreground leading-relaxed">
+                    {step}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            <p className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto">
+              The objective is long-term psychosocial resilience — not
+              short-term counseling.
             </p>
-          </motion.div>
-        ))}
-      </div>
-
-      <p className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto">
-        The objective is long-term psychosocial resilience — not short-term
-        counseling.
-      </p>
-    </div>
-
-  </div>
-</section>
-
+          </div>
+        </div>
+      </section>
 
       {/* Contact Form + Info */}
       <section className="py-20 bg-background" id="contact-form">

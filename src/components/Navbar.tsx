@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/what-we-do" },
   { label: "Services", path: "/get-involved" },
-  { label: "Contact", path: "/contact" },
+  { label: "Project Hausla", path: "/contact" },
 ];
 
 const Navbar = () => {

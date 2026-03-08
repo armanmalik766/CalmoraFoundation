@@ -56,7 +56,7 @@ const programs = [
 
 const audiences = [
   {
-    img: "/audiences/classroom.jpeg",
+    img: "/audiences/new.jpeg",
     label: "Schools & Universities",
     desc: "Students, teachers, and educational institutions",
   },
@@ -76,7 +76,7 @@ const audiences = [
     desc: "Empowerment through emotional resilience",
   },
   {
-    img: "/audiences/professionals.jpg",
+    img: "/audiences/women.jpeg",
     label: "Professionals",
     desc: "Burnout prevention and stress management",
   },
@@ -95,7 +95,7 @@ const advisory = [
   },
   {
     img: "/advisory/advisor3.jpg",
-    name: "Dr. Sana Qureshi",
+    name: "Adv. Kashif Athar",
     role: "Community Mental Health Specialist",
   },
   {
@@ -130,9 +130,9 @@ const WhatWeDo = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+      <section className="relative h-[70vh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          {/* <img src={skillTraining} alt="Our work" className="w-full h-full object-cover" /> */}
+          <img src={skillTraining} alt="Our work" className="w-full h-[170%] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10">

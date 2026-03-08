@@ -8,7 +8,7 @@ import {
   CheckCircle,
   Phone,
 } from "lucide-react";
-import teamOutdoor from "@/assets/women.jpeg";
+import teamOutdoor from "@/assets/team-outdoor.jpeg";
 import { useEffect } from "react";
 
 const fadeUp = {
@@ -89,7 +89,7 @@ const GetInvolved = () => {
           <img
             src={teamOutdoor}
             alt="Get involved"
-            className="w-full h-[180%] object-cover"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
