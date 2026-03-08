@@ -8,7 +8,7 @@ import {
   CheckCircle,
   Phone,
 } from "lucide-react";
-import teamOutdoor from "@/assets/team-outdoor.jpeg";
+import teamOutdoor from "@/assets/team-bg.jpeg";
 import { useEffect } from "react";
 
 const fadeUp = {
@@ -83,34 +83,14 @@ const GetInvolved = () => {
 
   return (
     <main className="pt-16">
-      {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={teamOutdoor}
-            alt="Get involved"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-              Join Us
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              Services
-            </h1>
-            <p className="text-primary-foreground/70 text-lg max-w-lg">
-              Multiple ways to contribute to building emotionally resilient
-              communities.
-            </p>
-          </motion.div>
-        </div>
+      <section className="relative w-full overflow-hidden">
+        <img
+          src={teamOutdoor}
+          alt="Get involved"
+          className="w-full h-auto object-contain"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
       </section>
 
       {/* Ways to contribute */}

@@ -130,9 +130,9 @@ const WhatWeDo = () => {
   return (
     <main className="pt-16">
       {/* Hero */}
-      <section className="relative h-[70vh] min-h-[400px] flex items-center overflow-hidden">
+      <section className="relative h-[50vh] md:h-[70vh] min-h-[400px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={skillTraining} alt="Our work" className="w-full h-[170%] object-cover" />
+          <img src={skillTraining} alt="Our work" className="w-full h-full md:h-[150%] md:object-cover object-contain" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -145,14 +145,12 @@ const WhatWeDo = () => {
               Our Work
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              About Calmora Foundation
+              About
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-4xl">
               Calmora Foundation is a New Delhi-based non-profit organization
               focused on structured psycho-social stabilization and mental
-              health system integration in India. Our work bridges
-              hospital-based psychological support and community-level mental
-              hygiene outreach to reduce long-term psychosocial risk.
+              health system integration in India.
             </p>
           </motion.div>
         </div>

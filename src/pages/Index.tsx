@@ -41,7 +41,7 @@ const Index = () => {
             {/* Accent bar */}
             <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
 
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-8">
               Preventing psychological and
               <br />
               social risks through community action.
