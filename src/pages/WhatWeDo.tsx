@@ -3,7 +3,7 @@ import { Brain, School, Users, Briefcase, Heart, BookOpen } from "lucide-react";
 import skillTraining from "@/assets/skill-training.jpeg";
 import classroom from "@/assets/classroom.jpeg";
 import workshop from "@/assets/workshop.jpeg";
-import counseling from "@/assets/counseling.jpeg";
+import counseling from "@/assets/change2.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -95,7 +95,7 @@ const advisory = [
   },
   {
     img: "/advisory/advisor3.jpg",
-    name: "Adv. Kashif Athar",
+    name: "Dr. Krish Mehdi",
     role: "Community Mental Health Specialist",
   },
   {
@@ -145,7 +145,7 @@ const WhatWeDo = () => {
               Our Work
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              About
+              About Us
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-4xl">
               Calmora Foundation is a New Delhi-based non-profit organization

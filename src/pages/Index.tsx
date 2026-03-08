@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Heart, Users, BookOpen, Shield, ArrowRight } from "lucide-react";
 import groupPhoto from "@/assets/group-photo.jpeg";
-import classroom from "@/assets/classroom.jpeg";
+import classroom from "@/assets/change1.jpeg";
 import teamOutdoor from "@/assets/team-outdoor.jpeg";
 import counseling from "@/assets/counseling.jpeg";
 import award from "@/assets/award.jpeg";
