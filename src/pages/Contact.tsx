@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle } from "lucide-react";
 import award from "@/assets/award.jpeg";
 import { useLocation } from "react-router-dom";
 
@@ -122,11 +122,11 @@ const Contact = () => {
               Reach Out
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              About Project HAUSLA{" "}
+              About Project Hosla{" "}
             </h1>
             <p className="text-primary-foreground/70 text-lg max-w-lg">
               For hospital partnerships, CSR collaborations, grants, or
-              community implementation of Project HAUSLA, please fill out the
+              community implementation of Project Hosla, please fill out the
               form below and our team will connect with you.
             </p>
           </motion.div>
@@ -138,7 +138,7 @@ const Contact = () => {
           {/* Section header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Project HAUSLA
+              Project Hosla
             </h1>
             <p className="text-lg text-muted-foreground">
               Integrated Psycho-Social Stabilization Framework designed to
@@ -147,10 +147,10 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* What HAUSLA Addresses */}
+          {/* What Hosla Addresses */}
           <div className="mb-20">
             <h2 className="font-display text-2xl font-bold text-center mb-10">
-              What HAUSLA Addresses
+              What Hosla Addresses
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,10 +178,10 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* How HAUSLA Works */}
+          {/* How Hosla Works */}
           <div className="max-w-5xl mx-auto">
             <h2 className="font-display text-2xl font-bold text-center mb-10">
-              How HAUSLA Works
+              How Hosla Works
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -215,6 +215,82 @@ const Contact = () => {
               The objective is long-term psychosocial resilience — not
               short-term counseling.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CSR Partnership Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3 text-center">
+              Corporate Social Responsibility
+            </p>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+              CSR Healthcare Partnerships in India
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Calmora Foundation partners with corporate CSR programs to implement structured psycho-social stabilization initiatives across healthcare and underserved communities.
+            </p>
+            <p className="text-md text-primary font-medium mt-4">
+              We align with Schedule VII CSR mandates under healthcare, preventive care, and community development.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* CSR Impact Areas */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              className="bg-card rounded-2xl p-10 shadow-card border border-border"
+            >
+              <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-left">
+                CSR Impact Areas
+              </h2>
+              <ul className="space-y-4">
+                {[
+                  "Hospital mental health program sponsorship",
+                  "Oncology counseling service support",
+                  "Community mental health outreach initiatives",
+                  "Mental hygiene awareness campaigns",
+                  "Caregiver support frameworks",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <CheckCircle className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <span className="text-foreground leading-relaxed font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Measurable CSR Impact */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              className="bg-card rounded-2xl p-10 shadow-card border border-border"
+            >
+              <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-left">
+                Measurable CSR Impact
+              </h2>
+              <p className="text-muted-foreground mb-8 text-sm">CSR partners receive:</p>
+              <div className="grid gap-6">
+                {[
+                  "Structured beneficiary reporting",
+                  "Psycho-social risk reduction metrics",
+                  "Quarterly outcome dashboards",
+                  "Transparent financial compliance",
+                ].map((metric) => (
+                  <div key={metric} className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 border border-primary/10">
+                    <div className="w-2 h-2 rounded-full bg-primary" />
+                    <span className="text-sm font-semibold text-foreground">{metric}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import WhatWeDo from "./pages/WhatWeDo";
 import GetInvolved from "./pages/GetInvolved";
+import Grants from "./pages/Grants";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/grants" element={<Grants />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

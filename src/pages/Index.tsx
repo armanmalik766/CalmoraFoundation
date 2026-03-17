@@ -41,16 +41,18 @@ const Index = () => {
             {/* Accent bar */}
             <div className="absolute -left-6 top-2 w-1 h-24 bg-primary rounded-full hidden md:block" />
 
-            <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground leading-tight mb-8">
-              Preventing psychological and
+            <h1 className="font-display text-2xl md:text-5xl mt-8 lg:mt-0 font-bold text-foreground leading-tight mb-8">
+              Psychological Risk,
               <br />
-              social risks through community action.
+              Thoughtfully Delivered
             </h1>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
-              Calmora Foundation provides structured psychological support
-              across schools, institutions, and underserved communities — before
-              crisis begins.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
+              Calmora Foundation is a structured psycho-social risk stabilization organization in India, working across hospital-integrated mental health programs and community-based outreach systems.
+            </p>
+            
+            <p className="text-muted-foreground leading-relaxed mb-10 max-w-xl">
+              We design measurable psycho-social support frameworks that complement medical treatment pathways and strengthen holistic human health outcomes.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -75,16 +77,22 @@ const Index = () => {
             <div className="absolute -inset-4 bg-primary/10 blur-2xl rounded-3xl" />
 
             <div className="relative bg-card border border-border rounded-3xl p-10 shadow-2xl">
-              <h3 className="font-display text-2xl font-bold mb-6">
-                Why Calmora Matters
+              <h3 className="font-display text-xl font-bold mb-6">
+                Integrated Psycho-Social Support for Hospitals and Communities
               </h3>
 
-              <ul className="space-y-5 text-muted-foreground">
-                <li>• Early mental health intervention programs</li>
-                <li>• School & university partnerships</li>
-                <li>• Community resilience initiatives</li>
-                <li>• Professional burnout prevention</li>
+              <ul className="space-y-4 text-muted-foreground text-sm">
+                <li>• Hospital mental health programs</li>
+                <li>• Oncology counseling services</li>
+                <li>• Chronic illness psychological support</li>
+                <li>• Caregiver support systems</li>
+                <li>• Community mental health outreach in India</li>
+                <li>• Mental hygiene awareness initiatives</li>
               </ul>
+              
+              <p className="text-xs text-primary mt-6 font-medium">
+                Our model ensures that psychological stabilization continues beyond discharge and extends into household environments.
+              </p>
 
               <div className="grid grid-cols-3 gap-6 mt-10 text-center">
                 <div>
@@ -143,44 +151,36 @@ const Index = () => {
               custom={0}
             >
               <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-                Who We Are
+                Strategic Impact
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                A Foundation Committed to{" "}
-                <span className="text-gradient">Preventive Care</span>
+                Why Psycho-Social <span className="text-gradient">Stabilization Matters</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Calmora Foundation is a legally registered mental health
-                foundation focused on preventive, community-based psychological
-                care. We bridge the gap between professional psychology and
-                community accessibility.
+                Medical recovery does not automatically resolve psychological distress. Unmanaged psycho-social risk can lead to:
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Mental health challenges are rising — anxiety in students,
-                burnout in professionals, unaddressed trauma in vulnerable
-                communities. Most support begins at crisis stage.{" "}
-                <strong className="text-foreground">
-                  Calmora works before crisis.
-                </strong>
-              </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {[
-                  { icon: Heart, label: "Emotional Resilience" },
-                  { icon: Users, label: "Community Based" },
-                  { icon: BookOpen, label: "Early Detection" },
-                  { icon: Shield, label: "Ethical Standards" },
+                  { icon: Shield, label: "Treatment non-adherence" },
+                  { icon: Heart, label: "Relapse anxiety" },
+                  { icon: Users, label: "Emotional instability" },
+                  { icon: BookOpen, label: "Caregiver burnout" },
+                  { icon: Shield, label: "Community stress escalation" },
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary"
+                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 group hover:bg-secondary transition-colors"
                   >
-                    <item.icon size={20} className="text-primary" />
+                    <item.icon size={18} className="text-primary group-hover:scale-110 transition-transform" />
                     <span className="text-sm font-medium text-foreground">
                       {item.label}
                     </span>
                   </div>
                 ))}
               </div>
+              <p className="text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-4">
+                Calmora Foundation addresses these gaps through structured intervention protocols and measurable outcomes.
+              </p>
             </motion.div>
             <motion.div
               initial="hidden"

@@ -7,7 +7,8 @@ const navItems = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/what-we-do" },
   { label: "Services", path: "/get-involved" },
-  { label: "Project Hausla", path: "/contact" },
+  { label: "Grants", path: "/grants" },
+  { label: "Project Hosla", path: "/contact" },
 ];
 
 const Navbar = () => {

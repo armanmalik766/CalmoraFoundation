@@ -7,6 +7,8 @@ import {
   ArrowRight,
   CheckCircle,
   Phone,
+  Hospital,
+  Users
 } from "lucide-react";
 import teamOutdoor from "@/assets/team-bg.jpeg";
 import { useEffect } from "react";
@@ -20,51 +22,45 @@ const fadeUp = {
   }),
 };
 
-const ways = [
+const services = [
   {
-    icon: Handshake,
-    title: "Collaborations",
-    desc: "Partner with us as an institution, university, or organization. We deliver customized mental health workshops and programs tailored to your community.",
+    icon: Hospital,
+    title: "Hospital-Integrated Mental Health Programs",
+    desc: "We collaborate with healthcare institutions to implement:",
     items: [
-      "University partnerships",
-      "Corporate wellness programs",
-      "NGO collaborations",
-      "Government initiatives",
+      "Oncology counseling services",
+      "Cancer survivorship mental health support",
+      "Chronic illness adjustment programs",
+      "Caregiver burnout assessment frameworks",
+      "Reintegration readiness planning",
     ],
+    footer: "Our hospital mental health programs are designed for measurable patient stabilization and structured reporting."
+  },
+  {
+    icon: Users,
+    title: "Community Mental Health Outreach in India",
+    desc: "We extend psycho-social support into underserved populations through:",
+    items: [
+      "Door-to-door counseling services",
+      "Early-risk identification",
+      "Mental hygiene awareness programs",
+      "Household-level psychosocial screening",
+      "Referral and escalation coordination",
+    ],
+    footer: "Community outreach strengthens preventive care and reduces systemic burden on hospitals."
   },
   {
     icon: Heart,
-    title: "Individual Support & Donation",
-    desc: "Your contribution helps us expand preventive mental health care to underserved communities. All donations are eligible for 80G tax exemption.",
+    title: "Caregiver Support Programs",
+    desc: "Caregiver burnout significantly impacts patient recovery outcomes. Calmora provides:",
     items: [
-      "One-time donations",
-      "Monthly support",
-      "Sponsor a workshop",
-      "Fund community outreach",
+      "Caregiver stress assessment",
+      "Emotional resilience education",
+      "Family adjustment guidance",
+      "Structured stabilization protocols",
     ],
-  },
-  {
-    icon: GraduationCap,
-    title: "Internship + Certificate",
-    desc: "Join Calmora as an intern and gain hands-on experience in community mental health practice. Receive a certificate upon completion.",
-    items: [
-      "Psychology students welcome",
-      "Hands-on field experience",
-      "Mentorship from RCI professionals",
-      "Certificate of completion",
-    ],
-  },
-  {
-    icon: Phone, // import from lucide-react
-    title: "Tele-Counselling",
-    desc: "Access professional mental health support remotely through confidential tele-counselling sessions.",
-    items: [
-      "Confidential one-on-one sessions",
-      "Accessible from anywhere",
-      "Guidance from trained professionals",
-      "Flexible appointment scheduling",
-    ],
-  },
+    footer: "Supporting caregivers strengthens holistic treatment success."
+  }
 ];
 
 const GetInvolved = () => {
@@ -83,61 +79,78 @@ const GetInvolved = () => {
 
   return (
     <main className="pt-16">
-      <section className="relative w-full overflow-hidden">
-        <img
-          src={teamOutdoor}
-          alt="Get involved"
-          className="w-full h-auto object-contain"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
+      <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={teamOutdoor}
+            alt="Psycho-Social Support Services in India"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
+        </div>
+        
       </section>
 
       {/* Ways to contribute */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
+          <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-              Work With Us
+              What We Offer
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Ways to Contribute
-            </h2>
-          </div>
-          <div className="grid lg:grid-cols-4 gap-8">
-            {ways.map((way, i) => (
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+              Psycho-Social Support Services in India
+            </h1>
+            <p className="text-foreground/70 text-lg max-w-2xl leading-relaxed my-4">
+              Calmora Foundation delivers structured psycho-social support services through institutional partnerships and community outreach programs.
+            </p>
+          </motion.div>
+        </div>
+         
+          <div className="grid lg:grid-cols-3 gap-8">
+            {services.map((service, i) => (
               <motion.div
-                key={way.title}
+                key={service.title}
                 custom={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-2xl p-8 shadow-card border border-border hover:shadow-soft transition-shadow"
+                className="bg-card rounded-2xl p-8 shadow-card border border-border flex flex-col hover:shadow-soft transition-all group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6">
-                  <way.icon className="text-primary-foreground" size={24} />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                  <service.icon className="text-primary group-hover:text-primary-foreground" size={28} />
                 </div>
-                <h3 className="font-display text-xl font-bold text-foreground mb-3">
-                  {way.title}
-                </h3>
+                <h2 className="font-display text-xl font-bold text-foreground mb-4 leading-tight">
+                  {service.title}
+                </h2>
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                  {way.desc}
+                  {service.desc}
                 </p>
-                <ul className="space-y-2">
-                  {way.items.map((item) => (
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {service.items.map((item) => (
                     <li
                       key={item}
-                      className="text-sm text-foreground flex items-center gap-2"
+                      className="text-sm text-foreground flex items-start gap-2"
                     >
                       <CheckCircle
-                        size={14}
-                        className="text-accent flex-shrink-0"
+                        size={16}
+                        className="text-primary flex-shrink-0 mt-0.5"
                       />
                       {item}
                     </li>
                   ))}
                 </ul>
+                <div className="pt-6 border-t border-border">
+                   <p className="text-xs font-medium text-primary leading-relaxed">
+                    {service.footer}
+                   </p>
+                </div>
               </motion.div>
             ))}
           </div>
