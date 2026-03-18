@@ -47,6 +47,7 @@ const Index = () => {
               Thoughtfully Delivered
             </h1>
 
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-xl">
               Calmora Foundation is a structured psycho-social risk stabilization organization in India, working across hospital-integrated mental health programs and community-based outreach systems.
             </p>
