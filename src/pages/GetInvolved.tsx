@@ -34,7 +34,9 @@ const services = [
       "Caregiver burnout assessment frameworks",
       "Reintegration readiness planning",
     ],
-    footer: "Our hospital mental health programs are designed for measurable patient stabilization and structured reporting."
+    footer: "Our hospital mental health programs are designed for measurable patient stabilization and structured reporting.",
+    cta: "Partner with us",
+    link :"http://docs.google.com/forms/d/15Uoxubu-18SWvaXCJ-x-f-cSVV8wcsXrXfElopvE6ks/edit"
   },
   {
     icon: Users,
@@ -47,7 +49,9 @@ const services = [
       "Household-level psychosocial screening",
       "Referral and escalation coordination",
     ],
-    footer: "Community outreach strengthens preventive care and reduces systemic burden on hospitals."
+    footer: "Community outreach strengthens preventive care and reduces systemic burden on hospitals.",
+    cta: "Reach out to us",
+    link:"https://docs.google.com/forms/d/1RHVrheuiFK-t71qGFkoyGi36MQCTzOOlFxH_pE7KKAc/edit"
   },
   {
     icon: Heart,
@@ -59,7 +63,23 @@ const services = [
       "Family adjustment guidance",
       "Structured stabilization protocols",
     ],
-    footer: "Supporting caregivers strengthens holistic treatment success."
+    footer: "Supporting caregivers strengthens holistic treatment success.",
+    cta: "Connect with us",
+    link:"https://docs.google.com/forms/d/180MVNit5Gi-VBNHLpBbYzFbXsPUcuUHsPS9Keovmywk/edit"
+  },
+  {
+    icon: GraduationCap,
+    title: "Internship Program",
+    desc: "Kickstart your journey with a mental health internship in India at Calmora designed to build real-world skills in psychology, counselling, and community impact:",
+    items: [
+      "Hands-on experience in mental health programs, workshops & outreach",
+      "Training in emotional intelligence, communication & counselling basics",
+      "Mentorship from experienced psychologists & industry professionals",
+      "Practical exposure to client interaction, engagement & program execution",
+    ],
+    footer: "Join us to build a more resilient mental health ecosystem.",
+    cta: "Join us",
+    link:"http://docs.google.com/forms/d/1_A5-SuvNYZFrMeD237fEd4SSGOE372KWGxis85NONNA/edit"
   }
 ];
 
@@ -79,16 +99,15 @@ const GetInvolved = () => {
 
   return (
     <main className="pt-16">
-      <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative w-full overflow-hidden bg-foreground">
+        <div className="relative w-full">
           <img
             src={teamOutdoor}
             alt="Psycho-Social Support Services in India"
-            className="w-full h-full object-cover"
+            className="w-full h-auto block"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 to-foreground/40 pointer-events-none" />
         </div>
-        
       </section>
 
       {/* Ways to contribute */}
@@ -112,7 +131,7 @@ const GetInvolved = () => {
           </motion.div>
         </div>
          
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -146,10 +165,18 @@ const GetInvolved = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="pt-6 border-t border-border">
+                <div className="pt-6 border-t border-border space-y-4">
                    <p className="text-xs font-medium text-primary leading-relaxed">
                     {service.footer}
                    </p>
+                   <a 
+                     href={service.link} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity w-full justify-center shadow-sm"
+                   >
+                     {service.cta} <ArrowRight size={16} />
+                   </a>
                 </div>
               </motion.div>
             ))}

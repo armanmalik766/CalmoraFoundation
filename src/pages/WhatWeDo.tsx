@@ -107,7 +107,7 @@ const advisory = [
 
 const team = [
   { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf1.jpeg" },
-  { name: "Seema Raturi", role: "Co founder", img: "/team/Seema.jpeg" },
+  { name: "Seema Raturi", role: "Cofounder & Director", img: "/team/Seema.jpeg" },
   { name: "Manya Sethi", role: "Vice President", img: "/team/Manya1.jpeg" },
   {
     name: "Jyotika Das",
@@ -417,6 +417,70 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
+      
+      <section className="py-24 bg-secondary/30 relative overflow-hidden">
+        {/* Decorative background element */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-20" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-background max-w-md mx-auto">
+                <img 
+                  src="/team/SeemaRaturi.jpeg" 
+                  alt="Seema Raturi" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl hidden md:block">
+                <p className="font-display font-bold text-xl">Seema Raturi</p>
+                <p className="text-sm opacity-90">Co-Founder & Author</p>
+              </div>
+            </motion.div>
+
+            {/* Bio Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              {/* <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
+                Meet the Founder
+              </p> */}
+              <h2 className="font-display text-4xl font-bold text-foreground mb-8 leading-tight">
+                A Vision of Compassion Care
+              </h2>
+              
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  <span className="text-foreground font-semibold">Seema Raturi</span> is the Co-Founder of Calmora Foundation, a purpose-driven initiative dedicated to strengthening mental health support and psychosocial well-being across communities.
+                </p>
+                <p>
+                  With over 15 years of experience in Human Resource leadership, she brings a deep understanding of people, systems, and organizational behaviour. Her professional journey in HR has allowed her to work closely with individuals across diverse environments, giving her firsthand insight into the growing emotional and psychological challenges faced in today’s fast-paced world.
+                </p>
+                <p>
+                  Driven by a strong belief that mental health care should be accessible, compassionate, and stigma-free, Seema established Calmora Foundation to bridge the gap between psychological support and underserved communities.
+                </p>
+                <p>
+                  Her work integrates psychological insight with practical community engagement, creating sustainable mental health ecosystems that support individuals, families, and institutions.
+                </p>
+                <p>
+                  Through Calmora Foundation, she continues to work towards building a society where mental health is recognized, respected, and supported as an essential part of overall well-being.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative flex justify-center">
@@ -469,68 +533,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-secondary/30 relative overflow-hidden">
-        {/* Decorative background element */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-20" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image Side */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-background max-w-md mx-auto">
-                <img 
-                  src="/team/SeemaRaturi.jpeg" 
-                  alt="Seema Raturi" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl hidden md:block">
-                <p className="font-display font-bold text-xl">Seema Raturi</p>
-                <p className="text-sm opacity-90">Co-Founder & Author</p>
-              </div>
-            </motion.div>
-
-            {/* Bio Side */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              {/* <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-4">
-                Meet the Founder
-              </p> */}
-              <h2 className="font-display text-4xl font-bold text-foreground mb-8 leading-tight">
-                A Vision for Compassionate Care
-              </h2>
-              
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  <span className="text-foreground font-semibold">Seema Raturi</span> is the Co-Founder of Calmora Foundation, a purpose-driven initiative dedicated to strengthening mental health support and psychosocial well-being across communities.
-                </p>
-                <p>
-                  With over 15 years of experience in Human Resource leadership, she brings a deep understanding of people, systems, and organizational behaviour. Her professional journey in HR has allowed her to work closely with individuals across diverse environments, giving her firsthand insight into the growing emotional and psychological challenges faced in today’s fast-paced world.
-                </p>
-                <p>
-                  Driven by a strong belief that mental health care should be accessible, compassionate, and stigma-free, Seema established Calmora Foundation to bridge the gap between psychological support and underserved communities.
-                </p>
-                <p>
-                  Her work integrates psychological insight with practical community engagement, creating sustainable mental health ecosystems that support individuals, families, and institutions.
-                </p>
-                <p>
-                  Through Calmora Foundation, she continues to work towards building a society where mental health is recognized, respected, and supported as an essential part of overall well-being.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
     </main>
   );
 };
