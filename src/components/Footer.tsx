@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Heart, Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -46,8 +46,30 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-background/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-background/40">© 2025 Calmora Foundation. All rights reserved.</p>
+        <div className="mt-12 pt-6 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <p className="text-xs text-background/40">© 2025 Calmora Foundation. All rights reserved.</p>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://www.linkedin.com/company/calmora-foundation/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-background/40 hover:text-background transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={16} />
+              </a>
+              <a 
+                href="https://www.instagram.com/calmorafoundation?igsh=MXFncmYxcTZvYWdy&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-background/40 hover:text-background transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={16} />
+              </a>
+            </div>
+          </div>
           <div className="flex items-center gap-1 text-xs text-background/40">
             Made with <Heart size={12} className="text-warm mx-1" /> for mental health
           </div>
