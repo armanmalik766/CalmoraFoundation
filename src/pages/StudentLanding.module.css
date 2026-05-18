@@ -1,0 +1,485 @@
+.landingPage {
+  font-family: 'DM Sans', sans-serif;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  line-height: 1.6;
+}
+
+.successMsg {
+  max-width: 600px;
+  margin: 0 auto;
+  background: hsl(142 70% 95%);
+  border: 1px solid hsl(142 70% 60%);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: hsl(142 70% 25%);
+}
+
+.errorMsg {
+  color: hsl(0 70% 45%);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.urgencyBody {
+  font-size: 1.1rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.formIntro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.formCta {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 8rem 0 5rem;
+  text-align: center;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.05), hsl(var(--accent) / 0.05));
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background: hsl(var(--primary) / 0.03);
+  border-radius: 50%;
+  blur: 100px;
+  z-index: 0;
+}
+
+.headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.btnPrimary {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.2);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.3);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: hsl(var(--primary));
+  padding: 0.75rem 2rem;
+  border: 2px solid hsl(var(--primary));
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btnSecondary:hover {
+  background-color: hsl(var(--primary) / 0.05);
+}
+
+.trustLine {
+  font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* SECTION 2 — THE PROBLEM */
+.problem {
+  padding: 5rem 0;
+  background-color: hsl(var(--card));
+}
+
+.sectionHeading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: hsl(var(--foreground));
+  line-height: 1.3;
+}
+
+.bodyCopy {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.bodyCopy p {
+  margin-bottom: 1.5rem;
+}
+
+/* SECTION 3 — WHAT WE OFFER */
+.offering {
+  padding: 5rem 0;
+  background-color: hsl(var(--background));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: hsl(var(--card));
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+.cardIcon {
+  color: hsl(var(--primary));
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.95rem;
+}
+
+/* SECTION 4 — WHY CALMORA */
+.whyUs {
+  padding: 5rem 0;
+  background-color: hsl(var(--secondary));
+}
+
+.pointsList {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.pointsList li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+
+.checkIcon {
+  color: hsl(var(--accent));
+  flex-shrink: 0;
+}
+
+/* SECTION 5 — COMMON STRUGGLES */
+.struggles {
+  padding: 5rem 0;
+  background-color: hsl(var(--card));
+}
+
+.strugglesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+}
+
+.bulletList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.bulletList li::before {
+  content: '•';
+  color: hsl(var(--primary));
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.closingLine {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+/* SECTION 6 — HOW IT WORKS */
+.howItWorks {
+  padding: 5rem 0;
+  background-color: hsl(var(--background));
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  width: 3rem;
+  height: 3rem;
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 auto 1.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: hsl(var(--muted-foreground));
+}
+
+/* SECTION 7 — SOCIAL PROOF */
+.testimonials {
+  padding: 5rem 0;
+  background-color: hsl(var(--secondary));
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonialCard {
+  background-color: hsl(var(--card));
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonialCard p {
+  font-style: italic;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+}
+
+.stars {
+  color: #fbbf24; /* Amber color for stars */
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* SECTION 8 — URGENCY / CTA */
+.urgency {
+  padding: 5rem 0;
+  background-color: hsl(var(--card));
+  text-align: center;
+}
+
+.finalLine {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+/* FORM SECTION */
+.formSection {
+  padding: 5rem 0;
+  background-color: hsl(var(--background));
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: hsl(var(--card));
+  padding: 3rem;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-card);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid hsl(var(--input));
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.emailNote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER */
+.footer {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+.footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+  .strugglesGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaGroup {
+    flex-direction: column;
+  }
+}
