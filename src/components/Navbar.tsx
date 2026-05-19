@@ -9,7 +9,7 @@ const navItems = [
   { label: "Services", path: "/get-involved" },
   { label: "Grants", path: "/grants" },
   { label: "Project Hosla", path: "/contact" },
-  { label: "Student Therapy", path: "/student-therapy" },
+  { label: "Therapy", path: "/student-therapy" },
 ];
 
 const Navbar = () => {
