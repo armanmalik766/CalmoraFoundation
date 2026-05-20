@@ -87,12 +87,11 @@
 ═══════════════════════════════════════ */
 .hero {
   position: relative;
-  padding: 9rem 0 7rem;
+  padding: 9rem 0 4rem;
   text-align: center;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, hsl(var(--primary) / 0.12), transparent 70%),
               hsl(var(--background));
   overflow: hidden;
-  min-height: 92vh;
   display: flex;
   align-items: center;
 }
@@ -208,10 +207,66 @@
 }
 
 /* ═══════════════════════════════════════
+   VIDEO SHOWCASE
+═══════════════════════════════════════ */
+.videoSection {
+  padding: 3rem 0 6rem;
+  background: hsl(var(--background));
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.videoSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, hsl(var(--primary) / 0.06), transparent 70%);
+  pointer-events: none;
+}
+
+.videoSubtext {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  max-width: 580px;
+  margin: 0.25rem auto 2rem;
+}
+
+.videoWrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px hsl(var(--border)),
+    0 32px 80px hsl(0 0% 0% / 0.18),
+    0 0 60px hsl(var(--primary) / 0.12);
+  animation: fadeSlideDown 0.8s ease 0.2s both;
+}
+
+.videoGlow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.85rem;
+  background: var(--gradient-primary, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))));
+  z-index: -1;
+  opacity: 0.35;
+  filter: blur(8px);
+}
+
+.videoPlayer {
+  width: 100%;
+  display: block;
+  border-radius: 1.75rem;
+  object-fit: contain;
+  background: hsl(var(--card));
+}
+
+/* ═══════════════════════════════════════
    PROBLEM
 ═══════════════════════════════════════ */
 .problem {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--card));
   text-align: center;
   position: relative;
@@ -227,20 +282,20 @@
 
 .sectionHeading {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
   font-weight: 800;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: hsl(var(--foreground));
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .problemGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto 3rem;
+  gap: 1.25rem;
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
 }
 .problemStat {
   padding: 2rem 1.5rem;
@@ -283,7 +338,7 @@
    SERVICES / OFFERING
 ═══════════════════════════════════════ */
 .offering {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--background));
   text-align: center;
 }
@@ -291,8 +346,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
 }
 
 .card {
@@ -367,7 +422,7 @@
    WHY CALMORA
 ═══════════════════════════════════════ */
 .whyUs {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--secondary));
   position: relative;
   overflow: hidden;
@@ -386,7 +441,7 @@
 .whyGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 4rem;
   align-items: center;
 }
 
@@ -409,7 +464,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.65rem;
 }
 .pointsList li {
   display: flex;
@@ -442,7 +497,7 @@
    STRUGGLES
 ═══════════════════════════════════════ */
 .struggles {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--card));
   text-align: center;
 }
@@ -450,10 +505,10 @@
 .strugglesGrid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.6rem;
   justify-content: center;
   max-width: 800px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
 }
 
 .struggleTag {
@@ -493,7 +548,7 @@
    HOW IT WORKS
 ═══════════════════════════════════════ */
 .howItWorks {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--background));
   text-align: center;
 }
@@ -502,7 +557,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
   position: relative;
 }
 
@@ -555,7 +610,7 @@
    TESTIMONIALS
 ═══════════════════════════════════════ */
 .testimonials {
-  padding: 6rem 0;
+  padding: 5rem 0;
   background: hsl(var(--secondary));
   text-align: center;
 }
@@ -563,8 +618,8 @@
 .testimonialGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
 }
 
 .testimonialCard {
@@ -648,7 +703,7 @@
    FINAL CTA BAND
 ═══════════════════════════════════════ */
 .ctaBand {
-  padding: 7rem 0;
+  padding: 5.5rem 0;
   background: var(--gradient-primary, linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent))));
   text-align: center;
   position: relative;
@@ -712,52 +767,92 @@
 @media (max-width: 768px) {
   .container { padding: 0 1.25rem; }
 
-  .hero {
-    padding: 7rem 0 5rem;
-    min-height: auto;
-    text-align: center;
-  }
-  .orb1 { width: 300px; height: 300px; top: -80px; left: -80px; }
-  .orb2 { width: 250px; height: 250px; right: -80px; }
+  /* ── HERO ── */
+  .hero { padding: 5rem 0 3rem; text-align: center; }
+  .orb1 { width: 280px; height: 280px; top: -60px; left: -60px; }
+  .orb2 { width: 220px; height: 220px; right: -60px; }
   .orb3 { display: none; }
-
-  .headline { font-size: 2.2rem; }
-  .subheadline { font-size: 1rem; }
-
-  .ctaGroup {
-    flex-direction: column;
-    align-items: center;
-  }
+  .headline { font-size: 2rem; margin-bottom: 1rem; }
+  .subheadline { font-size: 0.95rem; margin-bottom: 2rem; }
+  .ctaGroup { flex-direction: column; align-items: center; margin-bottom: 2rem; }
   .btnPrimary, .btnLight {
     width: 100%;
-    max-width: 320px;
+    max-width: 300px;
     justify-content: center;
+    padding: 0.8rem 1.5rem;
   }
-
   .trustPills { gap: 0.4rem; }
-  .trustPill  { font-size: 0.75rem; padding: 0.25rem 0.75rem; }
+  .trustPill  { font-size: 0.72rem; padding: 0.22rem 0.7rem; }
 
-  .sectionHeading { font-size: 1.75rem; }
+  /* ── SECTION LABELS & HEADINGS ── */
+  .sectionLabel { font-size: 0.7rem; padding: 0.25rem 0.75rem; margin-bottom: 0.75rem; }
+  .sectionHeading { font-size: 1.6rem; margin-bottom: 2rem; }
 
-  .problemGrid { grid-template-columns: 1fr; gap: 1rem; }
+  /* ── VIDEO ── */
+  .videoSection { padding: 2.5rem 0 4rem; }
+  .videoWrapper { border-radius: 1rem; }
+  .videoPlayer  { border-radius: 1rem; }
+  .videoSubtext { font-size: 0.9rem; margin-bottom: 2rem; }
 
-  .grid { grid-template-columns: 1fr; }
+  /* ── PROBLEM ── */
+  .problem { padding: 4rem 0; }
+  .problemGrid { grid-template-columns: 1fr 1fr; gap: 0.75rem; max-width: 100%; }
+  .problemStat { padding: 1.25rem 0.75rem; border-radius: 1rem; }
+  .statNum { font-size: 2rem; }
+  .statDesc { font-size: 0.8rem; }
+  .problemText { font-size: 0.95rem; }
 
-  .whyGrid { grid-template-columns: 1fr; gap: 3rem; }
+  /* ── SERVICES ── */
+  .offering { padding: 4rem 0; }
+  .grid { grid-template-columns: 1fr; gap: 1rem; }
+  .card { padding: 1.5rem; border-radius: 1.25rem; }
+
+  /* ── WHY CALMORA ── */
+  .whyUs { padding: 4rem 0; }
+  .whyGrid { grid-template-columns: 1fr; gap: 2rem; }
   .whyLeft { align-items: center; text-align: center; }
-  .whyDesc { max-width: 100%; }
+  .whyDesc { max-width: 100%; font-size: 0.95rem; }
+  .pointsList li { font-size: 0.9rem; padding: 0.75rem 1rem; }
 
-  .stepsGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+  /* ── STRUGGLES ── */
+  .struggles { padding: 4rem 0; }
+  .strugglesGrid { gap: 0.5rem; }
+  .struggleTag { font-size: 0.82rem; padding: 0.4rem 0.85rem; }
+  .closingLine { font-size: 1rem; }
+
+  /* ── HOW IT WORKS — 2×2 grid ── */
+  .howItWorks { padding: 4rem 0; }
+  .stepsGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
   .stepConnector { display: none; }
+  .step { padding: 1.25rem 0.75rem; }
+  .stepNumber {
+    width: 52px;
+    height: 52px;
+    font-size: 0.95rem;
+    margin-bottom: 0.85rem;
+  }
+  .step p { font-size: 0.85rem; max-width: 100%; }
 
-  .testimonialGrid { grid-template-columns: 1fr; }
+  /* ── TESTIMONIALS ── */
+  .testimonials { padding: 4rem 0; }
+  .testimonialGrid { grid-template-columns: 1fr; gap: 1rem; }
+  .testimonialCard { padding: 1.5rem; border-radius: 1.25rem; }
 
-  .ctaBand { padding: 5rem 0; }
-  .ctaBandHeading { font-size: 2rem; }
+  /* ── CTA BAND ── */
+  .ctaBand { padding: 4rem 0; }
+  .ctaBandHeading { font-size: 1.75rem; }
+  .ctaBandSub { font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
-  .headline { font-size: 1.9rem; }
-  .problemStat { padding: 1.5rem 1rem; }
-  .statNum { font-size: 2rem; }
+  .headline { font-size: 1.75rem; }
+  .sectionHeading { font-size: 1.4rem; }
+  .problemGrid { grid-template-columns: 1fr; }
+  .stepsGrid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stepNumber { width: 46px; height: 46px; font-size: 0.85rem; }
 }
+

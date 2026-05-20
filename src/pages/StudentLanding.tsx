@@ -119,6 +119,31 @@ const StudentLanding = () => {
         </div>
       </section>
 
+      {/* VIDEO SHOWCASE */}
+      <section className={styles.videoSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionLabel}>See What We Do</div>
+          <h2 className={styles.sectionHeading}>
+            A Glimpse Into<br /><span className={styles.headlineGradient}>Your Safe Space</span>
+          </h2>
+          <p className={styles.videoSubtext}>
+            Watch how Calmora Foundation creates a welcoming, professional environment where real healing begins.
+          </p>
+          <div className={styles.videoWrapper}>
+            <div className={styles.videoGlow} />
+            <video
+              className={styles.videoPlayer}
+              src="/Therapy.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+            />
+          </div>
+        </div>
+      </section>
+
       {/* PROBLEM */}
       <section className={styles.problem}>
         <div className={styles.container}>
