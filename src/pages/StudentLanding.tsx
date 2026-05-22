@@ -1,7 +1,10 @@
 import { Check, Shield, Heart, Users, BookOpen, Star, ExternalLink, ArrowRight, Quote } from "lucide-react";
+import { useEffect } from "react";
 import styles from "./StudentLanding.module.css";
 
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc0eU-JIzYCpu1LWcxl89X7pOAUqEEcXwosn8s0IrX139CZ-Q/viewform";
+
+const META_PIXEL_ID = "1324436552960880";
 
 const services = [
   {
@@ -85,8 +88,73 @@ const testimonials = [
 ];
 
 const StudentLanding = () => {
+  // Meta Pixel (Facebook) — inject on mount, clean up on unmount
+  useEffect(() => {
+    // Avoid double-init if already loaded
+    if ((window as any).fbq) return;
+
+    const fbq: any = function (...args: any[]) {
+      fbq.callMethod ? fbq.callMethod(...args) : fbq.queue.push(args);
+    };
+    fbq.push = fbq;
+    fbq.loaded = true;
+    fbq.version = "2.0";
+    fbq.queue = [];
+    (window as any).fbq = fbq;
+    (window as any)._fbq = fbq;
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://connect.facebook.net/en_US/fbevents.js";
+    document.head.appendChild(script);
+
+    fbq("init", META_PIXEL_ID);
+    fbq("track", "PageView");
+
+    return () => {
+      // Clean up on unmount
+      script.remove();
+    };
+  }, []);
+
   return (
     <div className={styles.landingPage}>
+
+      {/* Meta Pixel noscript fallback */}
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          alt=""
+        />
+      </noscript>
+
+      {/* VIDEO SHOWCASE */}
+      <section className={styles.videoSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionLabel}>See What We Do</div>
+          <h2 className={styles.sectionHeading}>
+            A Glimpse Into<br /><span className={styles.headlineGradient}>Your Safe Space</span>
+          </h2>
+          <p className={styles.videoSubtext}>
+            Watch how Calmora Foundation creates a welcoming, professional environment where real healing begins.
+          </p>
+          <div className={styles.videoWrapper}>
+            <div className={styles.videoGlow} />
+            <video
+              className={styles.videoPlayer}
+              src="/Therapy.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+            />
+          </div>
+        </div>
+      </section>
 
       {/* HERO */}
       <section className={styles.hero}>
@@ -115,31 +183,6 @@ const StudentLanding = () => {
             {["Confidential", "Judgment-Free", "Affordable", "Online & Offline"].map((t) => (
               <span key={t} className={styles.trustPill}>{t}</span>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VIDEO SHOWCASE */}
-      <section className={styles.videoSection}>
-        <div className={styles.container}>
-          <div className={styles.sectionLabel}>See What We Do</div>
-          <h2 className={styles.sectionHeading}>
-            A Glimpse Into<br /><span className={styles.headlineGradient}>Your Safe Space</span>
-          </h2>
-          <p className={styles.videoSubtext}>
-            Watch how Calmora Foundation creates a welcoming, professional environment where real healing begins.
-          </p>
-          <div className={styles.videoWrapper}>
-            <div className={styles.videoGlow} />
-            <video
-              className={styles.videoPlayer}
-              src="/Therapy.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              controls
-            />
           </div>
         </div>
       </section>
