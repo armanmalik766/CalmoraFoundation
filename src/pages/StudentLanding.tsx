@@ -2,7 +2,7 @@ import { Check, Shield, Heart, Users, BookOpen, Star, ExternalLink, ArrowRight, 
 import { useEffect } from "react";
 import styles from "./StudentLanding.module.css";
 
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc0eU-JIzYCpu1LWcxl89X7pOAUqEEcXwosn8s0IrX139CZ-Q/viewform";
+const GOOGLE_FORM_URL = "https://forms.gle/xesXuA13XaNzPURR9";
 
 const META_PIXEL_ID = "1324436552960880";
 
