@@ -145,7 +145,7 @@ const StudentLanding = () => {
             <div className={styles.videoGlow} />
             <video
               className={styles.videoPlayer}
-              src="/Therapy.mp4"
+              src="/CalmoraN.mp4"
               autoPlay
               loop
               muted
