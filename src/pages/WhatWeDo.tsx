@@ -110,11 +110,6 @@ const team = [
   { name: "Seema Raturi", role: "Cofounder & Director", img: "/team/Seema.jpeg" },
   { name: "Manya Sethi", role: "Vice President", img: "/team/Manya1.jpeg" },
   {
-    name: "Jyotika Das",
-    role: "Counselling Psychologist",
-    img: "/team/Jyotika.jpeg",
-  },
-  {
     name: "Anam Mushtaq",
     role: "Applied Research Psychologist",
     img: "/team/Anam.jpeg",
