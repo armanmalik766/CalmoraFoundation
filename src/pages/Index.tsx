@@ -73,18 +73,18 @@ const Index = () => {
         {/* Masonry / Slanted Gallery & Side elements */}
         <div className="flex justify-between items-stretch relative z-10 w-full gap-1 sm:gap-6">
           {/* Left vertical text */}
-          <div className="flex flex-col items-center justify-between py-4 sm:py-10 w-8 sm:w-12 lg:w-16 flex-shrink-0">
-            <div className="transform -rotate-90 origin-center whitespace-nowrap text-[8px] sm:text-xs text-gray-500 font-medium tracking-widest mt-48 sm:mt-72 w-48 text-center">
+          <div className="flex flex-col items-center justify-between py-4 sm:py-10 w-6 sm:w-12 lg:w-16 flex-shrink-0">
+            <div className="transform -rotate-90 origin-center whitespace-nowrap text-[6px] sm:text-xs text-gray-500 font-medium tracking-widest mt-10 sm:mt-72 w-32 sm:w-48 text-center">
               A STRUCTURED PSYCHO-SOCIAL STABILIZATION ORGANIZATION
             </div>
             
-            <button className="bg-vivid-green text-white p-2 sm:p-4 rounded-full hover:scale-110 transition shadow-xl mt-32 sm:mt-40">
-              <ArrowUpRight className="rotate-90 w-4 h-4 sm:w-6 sm:h-6" />
+            <button className="bg-vivid-green text-white p-1.5 sm:p-4 rounded-full hover:scale-110 transition shadow-xl mb-2 sm:mb-0">
+              <ArrowUpRight className="rotate-90 w-3 h-3 sm:w-6 sm:h-6" />
             </button>
           </div>
 
           {/* Center Images */}
-          <div className="flex-1 grid grid-cols-3 gap-1 sm:gap-2 md:gap-4 h-[200px] sm:h-[350px] md:h-[500px]">
+          <div className="flex-1 grid grid-cols-3 gap-1 sm:gap-2 md:gap-4 h-[250px] sm:h-[350px] md:h-[500px]">
              {/* Left slanted image */}
              <div className="w-full h-full relative group overflow-hidden" style={{ clipPath: "polygon(0 15%, 100% 0, 100% 100%, 0 85%)" }}>
                 <img src={classroom} alt="Classroom" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -100,14 +100,14 @@ const Index = () => {
           </div>
 
           {/* Right stats vertical */}
-          <div className="flex flex-col items-center justify-between py-20 sm:py-32 w-8 sm:w-12 lg:w-16 flex-shrink-0 pr-1 sm:pr-4 relative z-20">
-             <div className="transform -rotate-90 origin-center whitespace-nowrap text-center text-dark-green">
-                <p className="font-bold text-sm sm:text-xl inline-block mr-1 sm:mr-2">10K+</p>
-                <p className="text-[8px] sm:text-xs text-gray-500 inline-block uppercase tracking-wider">Lives Reached</p>
+          <div className="flex flex-col items-center justify-between py-4 sm:py-32 w-6 sm:w-12 lg:w-16 flex-shrink-0 pr-1 sm:pr-4 relative z-20">
+             <div className="transform -rotate-90 origin-center whitespace-nowrap text-center text-dark-green mt-8 sm:mt-0">
+                <p className="font-bold text-xs sm:text-xl inline-block mr-1 sm:mr-2">10K+</p>
+                <p className="text-[6px] sm:text-xs text-gray-500 inline-block uppercase tracking-wider">Lives Reached</p>
              </div>
-             <div className="transform -rotate-90 origin-center whitespace-nowrap text-center text-dark-green">
-                <p className="font-bold text-sm sm:text-xl inline-block mr-1 sm:mr-2">50+</p>
-                <p className="text-[8px] sm:text-xs text-gray-500 inline-block uppercase tracking-wider">Programs</p>
+             <div className="transform -rotate-90 origin-center whitespace-nowrap text-center text-dark-green mb-8 sm:mb-0">
+                <p className="font-bold text-xs sm:text-xl inline-block mr-1 sm:mr-2">50+</p>
+                <p className="text-[6px] sm:text-xs text-gray-500 inline-block uppercase tracking-wider">Programs</p>
              </div>
           </div>
         </div>
