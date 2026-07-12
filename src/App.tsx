@@ -10,6 +10,7 @@ import WhatWeDo from "./pages/WhatWeDo";
 import GetInvolved from "./pages/GetInvolved";
 import Grants from "./pages/Grants";
 import Contact from "./pages/Contact";
+import MentalHealthFirstAider from "./pages/MentalHealthFirstAider";
 import StudentLanding from "./pages/StudentLanding";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/grants" element={<Grants />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/certification" element={<MentalHealthFirstAider />} />
           <Route path="/student-therapy" element={<StudentLanding />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

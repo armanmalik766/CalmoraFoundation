@@ -4,6 +4,10 @@ import skillTraining from "@/assets/skill-training.jpeg";
 import classroom from "@/assets/classroom.jpeg";
 import workshop from "@/assets/workshop.jpeg";
 import counseling from "@/assets/change2.jpeg";
+import anamImg from "@/assets/anam.jpeg";
+import sadafImg from "@/assets/sadaf.jpeg";
+import seemaImg from "@/assets/seema.jpeg";
+import home2Img from "@/assets/home2.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -56,7 +60,7 @@ const programs = [
 
 const audiences = [
   {
-    img: "/audiences/new.jpeg",
+    img: home2Img,
     label: "Schools & Universities",
     desc: "Students, teachers, and educational institutions",
   },
@@ -106,13 +110,13 @@ const advisory = [
 ];
 
 const team = [
-  { name: "Sadaf Saeed", role: "Founder & Director", img: "/team/Sadaf1.jpeg" },
-  { name: "Seema Raturi", role: "Cofounder & Director", img: "/team/Seema.jpeg" },
-  { name: "Manya Sethi", role: "Vice President", img: "/team/Manya1.jpeg" },
+  { name: "Sadaf Saeed", role: "Founder & Director", img: sadafImg, position: "object-top", scaleClass: "scale-[1.4] hover:scale-[1.5]" },
+  { name: "Seema Raturi", role: "Cofounder & Director", img: seemaImg, position: "object-[center_10%]", scaleClass: "scale-[1.25] hover:scale-[1.35]" },
   {
     name: "Anam Mushtaq",
     role: "Applied Research Psychologist",
-    img: "/team/Anam.jpeg",
+    img: anamImg,
+    scaleClass: "scale-100 hover:scale-110"
   },
   {
     name: "Raj Manya",
@@ -153,7 +157,7 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-     <section className="py-24 bg-background">
+     <section className="py-16 md:py-24 bg-background">
   <div className="container mx-auto px-4">
     
     <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
@@ -203,7 +207,7 @@ const WhatWeDo = () => {
   </div>
 </section>
 
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           {/* Heading */}
           <div className="text-center mb-14">
@@ -225,21 +229,21 @@ const WhatWeDo = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-shadow"
+                className="group relative bg-white rounded-[40px] p-8 flex flex-col items-center justify-center h-56 shadow-lg shadow-gray-100/50 hover:shadow-2xl hover:shadow-[#3B9E9A]/20 hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-gray-100/50"
               >
-                {/* Image */}
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-full h-48 object-cover"
-                />
-
-                {/* Info */}
-                <div className="p-6 text-center">
-                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">
-                    {member.name}
-                  </h4>
-                  {/* <p className="text-sm text-muted-foreground">{member.role}</p> */}
+                {/* Decorative corner glows */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#3B9E9A]/10 rounded-full blur-2xl group-hover:bg-[#3B9E9A]/30 group-hover:scale-150 transition-all duration-700" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#F9C846]/10 rounded-full blur-2xl group-hover:bg-[#F9C846]/30 group-hover:scale-150 transition-all duration-700" />
+                
+                {/* Inner Content */}
+                <div className="relative z-10 flex flex-col items-center">
+                   <div className="w-16 h-16 rounded-full bg-[#143C3A]/5 border border-[#143C3A]/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[#3B9E9A]/10 group-hover:border-[#3B9E9A]/20 transition-all duration-500">
+                      <span className="text-[#143C3A] font-bold text-2xl font-display group-hover:text-[#3B9E9A] transition-colors duration-500">{member.name.charAt(0)}</span>
+                   </div>
+                   <h4 className="font-display text-xl font-bold text-[#143C3A] text-center tracking-wide">
+                     {member.name}
+                   </h4>
+                   <div className="w-8 h-1 bg-[#F9C846]/50 rounded-full mt-4 group-hover:w-16 transition-all duration-500"></div>
                 </div>
               </motion.div>
             ))}
@@ -248,21 +252,18 @@ const WhatWeDo = () => {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-24 bg-vivid-green relative mt-16 rounded-t-[60px] md:rounded-t-[100px]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-              Our People
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Core Team
+          <div className="text-center mb-20 flex flex-col items-center">
+            <h2 className="font-display text-3xl md:text-4xl font-light text-white uppercase tracking-widest mb-2">
+              INTRODUCTION OF
             </h2>
-            <p className="text-muted-foreground mt-3 max-w-xl mx-auto text-sm">
-              Our team combines clinical expertise, operational management, and
-              community outreach experience.
-            </p>
+            <h1 className="font-display text-6xl md:text-[120px] font-bold text-[#EBE9E1] uppercase tracking-tighter leading-none">
+              OUR TEAM
+            </h1>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto px-2 md:px-10">
             {team.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -271,21 +272,27 @@ const WhatWeDo = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-card rounded-xl p-6 text-center shadow-card border border-border"
+                className="bg-[#EBE9E1] rounded-[24px] p-5 md:p-6 text-center shadow-2xl hover:scale-105 hover:shadow-black/40 transition-all duration-500"
               >
-                {/* TEAM IMAGE */}
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-40 h-40 rounded-full object-cover mx-auto mb-4 border-2 border-primary"
-                />
+                {/* TEAM IMAGE FRAME */}
+                <div className="w-full aspect-square overflow-hidden rounded-[16px] mb-6 relative bg-gray-200">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className={`w-full h-full object-cover transition-transform duration-700 ${member.position || 'object-center'} ${member.scaleClass || 'scale-100 hover:scale-110'}`}
+                  />
+                  {/* Subtle inner shadow overlay */}
+                  <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] pointer-events-none rounded-[16px]"></div>
+                </div>
 
-                <h4 className="font-display text-lg font-semibold text-foreground">
-                  {member.name}
-                </h4>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {member.role}
-                </p>
+                <div className="pb-3">
+                   <h4 className="font-display text-2xl font-bold text-[#232323] mb-1 tracking-tight">
+                     {member.name}
+                   </h4>
+                   <p className="text-sm font-bold tracking-wide text-[#666666] uppercase">
+                     {member.role}
+                   </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -343,7 +350,7 @@ const WhatWeDo = () => {
       </section> */}
 
       {/* Gallery */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
@@ -372,7 +379,7 @@ const WhatWeDo = () => {
       </section>
 
       {/* Target Audience */}
-      <section className="py-20 bg-secondary">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
@@ -413,7 +420,7 @@ const WhatWeDo = () => {
         </div>
       </section>
       
-      <section className="py-24 bg-secondary/30 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-20" />
         
@@ -476,7 +483,7 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative flex justify-center">
             <div className="absolute -inset-6 bg-primary/10 blur-2xl rounded-3xl" />

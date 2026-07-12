@@ -95,7 +95,7 @@ const Grants = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center mb-16">
           <motion.div
             initial="hidden"
@@ -143,7 +143,7 @@ const Grants = () => {
       </section>
 
       {/* Internal Linking / CSR Section */}
-      <section className="py-20 bg-secondary/50">
+      <section className="py-16 md:py-24 bg-secondary/50">
         <div className="container mx-auto px-4">
           <div className="bg-card rounded-3xl p-8 md:p-12 shadow-card border border-border overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32" />
@@ -198,7 +198,7 @@ const Grants = () => {
       </section>
 
       {/* Insights & Publications (Knowledge Hub) */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">

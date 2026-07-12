@@ -111,7 +111,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Ways to contribute */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -183,7 +183,7 @@ const GetInvolved = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-muted/30" id="donate">
+      <section className="py-16 md:py-24 bg-muted/30" id="donate">
         <div className="container mx-auto px-4">
           {/* Heading */}
           <div className="text-center mb-14">
@@ -246,7 +246,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Why invest */}
-      <section className="py-20 bg-secondary">
+      <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <motion.div
             initial="hidden"
