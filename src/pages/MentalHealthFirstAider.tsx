@@ -184,7 +184,7 @@ const MentalHealthFirstAider = () => {
 
       {/* SECTION 3: CURRICULUM */}
       <section className="py-16 md:py-24 bg-vivid-green relative overflow-hidden rounded-[60px] md:rounded-[120px] mx-2 md:mx-4 my-10">
-        <div className="absolute inset-0 bg-[url('@/assets/noise.png')] opacity-5 mix-blend-overlay"></div>
+
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-4 md:px-8 relative z-10">
