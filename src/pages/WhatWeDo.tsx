@@ -4,7 +4,6 @@ import skillTraining from "@/assets/skill-training.jpeg";
 import classroom from "@/assets/classroom.jpeg";
 import workshop from "@/assets/workshop.jpeg";
 import counseling from "@/assets/change2.jpeg";
-import anamImg from "@/assets/anam.jpeg";
 import sadafImg from "@/assets/sadaf.jpeg";
 import seemaImg from "@/assets/seema.jpeg";
 import home2Img from "@/assets/home2.jpeg";
@@ -86,38 +85,12 @@ const audiences = [
   },
 ];
 
-const advisory = [
-  {
-    img: "/advisory/advisor1.jpg",
-    name: "Dr. Amandeep Singh",
-    role: "Senior Clinical Psychologist",
-  },
-  {
-    img: "/advisory/advisor2.jpg",
-    name: "Dr. Mohsin Wali",
-    role: "Mental Health Policy Advisor",
-  },
-  {
-    img: "/advisory/advisor3.jpg",
-    name: "Dr. Krish Mehdi",
-    role: "Community Mental Health Specialist",
-  },
-  {
-    img: "/advisory/advisor4.jpg",
-    name: "Anita Kapoor",
-    role: "Youth Development Strategist",
-  },
-];
+
 
 const team = [
   { name: "Sadaf Saeed", role: "Founder & Director", img: sadafImg, position: "object-top", scaleClass: "scale-[1.4] hover:scale-[1.5]" },
   { name: "Seema Raturi", role: "Cofounder & Director", img: seemaImg, position: "object-[center_10%]", scaleClass: "scale-[1.25] hover:scale-[1.35]" },
-  {
-    name: "Anam Mushtaq",
-    role: "Applied Research Psychologist",
-    img: anamImg,
-    scaleClass: "scale-100 hover:scale-110"
-  },
+
   {
     name: "Raj Manya",
     role: "Counselling Psychologist",
@@ -207,49 +180,7 @@ const WhatWeDo = () => {
   </div>
 </section>
 
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          {/* Heading */}
-          <div className="text-center mb-14">
-            <p className="text-primary text-sm font-semibold tracking-widest uppercase mb-3">
-              Leadership & Guidance
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-              Advisory Board
-            </h2>
-          </div>
 
-          {/* Cards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advisory.map((member, i) => (
-              <motion.div
-                key={member.name}
-                custom={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="group relative bg-white rounded-[40px] p-8 flex flex-col items-center justify-center h-56 shadow-lg shadow-gray-100/50 hover:shadow-2xl hover:shadow-[#3B9E9A]/20 hover:-translate-y-2 transition-all duration-500 overflow-hidden border border-gray-100/50"
-              >
-                {/* Decorative corner glows */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#3B9E9A]/10 rounded-full blur-2xl group-hover:bg-[#3B9E9A]/30 group-hover:scale-150 transition-all duration-700" />
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#F9C846]/10 rounded-full blur-2xl group-hover:bg-[#F9C846]/30 group-hover:scale-150 transition-all duration-700" />
-                
-                {/* Inner Content */}
-                <div className="relative z-10 flex flex-col items-center">
-                   <div className="w-16 h-16 rounded-full bg-[#143C3A]/5 border border-[#143C3A]/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-[#3B9E9A]/10 group-hover:border-[#3B9E9A]/20 transition-all duration-500">
-                      <span className="text-[#143C3A] font-bold text-2xl font-display group-hover:text-[#3B9E9A] transition-colors duration-500">{member.name.charAt(0)}</span>
-                   </div>
-                   <h4 className="font-display text-xl font-bold text-[#143C3A] text-center tracking-wide">
-                     {member.name}
-                   </h4>
-                   <div className="w-8 h-1 bg-[#F9C846]/50 rounded-full mt-4 group-hover:w-16 transition-all duration-500"></div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team */}
       <section className="py-16 md:py-24 bg-vivid-green relative mt-16 rounded-t-[60px] md:rounded-t-[100px]">
