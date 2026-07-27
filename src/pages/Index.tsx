@@ -9,6 +9,7 @@ import teamOutdoor from "@/assets/team-outdoor.jpeg";
 import counseling from "@/assets/counseling.jpeg";
 import dignitaries from "@/assets/dignitaries.jpeg";
 import sadaf2Img from "@/assets/WhatsApp Image 2026-07-12 at 5.21.51 PM.jpeg";
+import seemaImg from "@/assets/seema.jpeg";
 import home1 from "@/assets/home1.jpeg";
 import home2 from "@/assets/home2.jpeg";
 import home3 from "@/assets/home3.jpeg";
@@ -228,7 +229,7 @@ const Index = () => {
                <img
                  src={sadaf2Img}
                  alt="Founder Ms. Sadaf Malik"
-                 className="w-full h-full md:h-[600px] max-w-md mx-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                 className="w-full h-[500px] md:h-[600px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-dark-green/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -280,6 +281,84 @@ const Index = () => {
                    <p className="text-sm md:text-base text-gray-600 font-medium leading-relaxed">{text}</p>
                  </div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION 3.6: CO-FOUNDER */}
+      <section className="py-16 md:py-24 container mx-auto px-4 md:px-8 relative overflow-hidden">
+        {/* Background Decorative element */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-72 h-72 bg-vivid-green/5 rounded-full blur-[80px] pointer-events-none -z-10" />
+
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="order-1 lg:order-1"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-vivid-green/10 text-vivid-green font-bold text-xs tracking-widest uppercase mb-6 border border-vivid-green/20">
+              <Star size={14} /> Co-Founder
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-dark-green mb-8 leading-[1.1]">
+              Co-Founded by <br />
+              <span className="font-bold text-vivid-green inline-block mt-2">Ms. Seema Raturi</span>
+            </h2>
+            
+            <p className="text-gray-600 leading-relaxed mb-10 text-lg md:text-xl font-light">
+              Co-Founder of Calmora Foundation with 15+ years of HR leadership experience. Driven by a belief that mental health care should be accessible, compassionate, and stigma-free.
+            </p>
+            
+            <div className="space-y-6">
+              {[
+                "15+ years of Human Resource leadership experience",
+                "Bridging the gap between psychological support and underserved communities",
+                "Author of 'The Art of Being Unshakable'"
+              ].map((text, i) => (
+                 <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(60,165,177,0.1)] hover:-translate-y-1 transition-all duration-300">
+                   <div className="w-8 h-8 rounded-full bg-vivid-green/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check size={16} className="text-vivid-green" />
+                   </div>
+                   <p className="text-sm md:text-base text-gray-600 font-medium leading-relaxed">{text}</p>
+                 </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={1}
+            className="order-2 lg:order-2 relative"
+          >
+            {/* Image backdrop shape */}
+            <div className="absolute -inset-4 md:-inset-6 bg-gradient-to-tl from-vivid-green/20 to-vivid-yellow/20 rounded-[60%_40%_30%_70%/50%_40%_60%_50%] blur-xl opacity-70 animate-pulse pointer-events-none" />
+            
+            <div className="relative rounded-[40px] md:rounded-[60px] overflow-hidden shadow-[0_20px_50px_rgba(15,60,49,0.15)] border-4 border-white group">
+               <img
+                 src={seemaImg}
+                 alt="Co-Founder Ms. Seema Raturi"
+                 className="w-full h-[500px] md:h-[600px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-dark-green/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+
+            {/* Floating Glass Badge */}
+            <div className="absolute bottom-10 right-2 md:-right-12 bg-white/80 backdrop-blur-md p-4 md:p-5 rounded-2xl shadow-xl border border-white/50 flex items-center gap-3 md:gap-4">
+               <div className="w-12 h-12 rounded-full bg-vivid-green/20 flex items-center justify-center">
+                  <Star className="text-vivid-green fill-vivid-green" size={24} />
+               </div>
+               <div>
+                  <p className="font-bold text-dark-green text-lg leading-tight">15+ Years</p>
+                  <p className="text-xs text-gray-500 font-medium tracking-wide">HR LEADERSHIP</p>
+               </div>
             </div>
           </motion.div>
         </div>
