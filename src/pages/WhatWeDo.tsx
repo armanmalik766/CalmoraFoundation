@@ -88,7 +88,7 @@ const audiences = [
 
 
 const team = [
-  { name: "Sadaf Saeed", role: "Founder & Director", img: sadafImg, position: "object-top", scaleClass: "scale-[1.4] hover:scale-[1.5]" },
+  { name: "Sadaf Malik", role: "Founder & Director", img: sadafImg, position: "object-top", scaleClass: "scale-[1.4] hover:scale-[1.5]" },
   { name: "Seema Raturi", role: "Cofounder & Director", img: seemaImg, position: "object-[center_10%]", scaleClass: "scale-[1.25] hover:scale-[1.35]" },
 
   {

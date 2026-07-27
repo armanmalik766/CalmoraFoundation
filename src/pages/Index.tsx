@@ -227,7 +227,7 @@ const Index = () => {
             <div className="relative rounded-[40px] md:rounded-[60px] overflow-hidden shadow-[0_20px_50px_rgba(15,60,49,0.15)] border-4 border-white group">
                <img
                  src={sadaf2Img}
-                 alt="Founder Ms. Sadaf Saeed"
+                 alt="Founder Ms. Sadaf Malik"
                  className="w-full h-full md:h-[600px] max-w-md mx-auto object-cover group-hover:scale-105 transition-transform duration-700"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-dark-green/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -259,7 +259,7 @@ const Index = () => {
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-dark-green mb-8 leading-[1.1]">
               Founded by <br />
-              <span className="font-bold text-vivid-green inline-block mt-2">Ms. Sadaf Saeed</span>
+              <span className="font-bold text-vivid-green inline-block mt-2">Ms. Sadaf Malik</span>
             </h2>
             
             <p className="text-gray-600 leading-relaxed mb-10 text-lg md:text-xl font-light">
