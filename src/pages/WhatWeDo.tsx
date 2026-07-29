@@ -6,6 +6,7 @@ import workshop from "@/assets/workshop.jpeg";
 import counseling from "@/assets/change2.jpeg";
 import sadafImg from "@/assets/sadaf.jpeg";
 import seemaImg from "@/assets/seema.jpeg";
+import simranImg from "@/assets/simranNaaz.jpeg";
 import home2Img from "@/assets/home2.jpeg";
 
 const fadeUp = {
@@ -92,9 +93,9 @@ const team = [
   { name: "Seema Raturi", role: "Cofounder & Director", img: seemaImg, position: "object-[center_10%]", scaleClass: "scale-[1.25] hover:scale-[1.35]" },
 
   {
-    name: "Raj Manya",
+    name: "Simran Naaz",
     role: "Counselling Psychologist",
-    img: "/team/Raj.jpeg",
+    img: simranImg,
   },
 ];
 
